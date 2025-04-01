@@ -1,8 +1,8 @@
 ---
-title: Slide Examples
-subtitle: Pandoc revealjs
-author: Wolfgang Hönig
-date: June, 2024
+title: Online talk with Keisuke Okumura
+subtitle: 
+author:
+date: 02.04.2025
 
 theme: white
 title-slide-attributes:
@@ -16,10 +16,48 @@ navigationMode: 'linear'
 controls: false
 ---
 
-# Section 1
+# db-CBS
 
-## Lists
+## db-CBS: Approach
 
-- Item1
-- Item2
+- Step 1: All single robot trajectories are generated with db-A*
+- Step 2: Inter-robot collisions are detected and resolved 
+- Step 3: Discontinuities in robot trajectories are fixed with non-linear optimization
+
+
+# Interaction-aware db-CBS (db-ECBS)
+
+
+## db-ECBS: Extensions
+
+::: fragment
+- Reasons about *aerodynamic interaction force* between flying robots
+:::
+::: fragment
+- Scales better with increasing number of robots (N=16)
+:::
+::: fragment
+- Analysis on heuristics, computation time, and discrete search
+:::
+::: fragment
+- Better/faster implementation of the algorithm
+:::
+
+
+## db-ECBS: Close-proximity flight scene
+
+blue - small robots, orange - large robot
+
+```{=html}
+<video data-autoplay src="media/video/NeuralSwarm2-example.mp4"></video>
+```
+
+## db-ECBS: Close-proximity flight scene
+
+```{=html}
+<video data-autoplay src="media/video/demo-uav.mp4"></video>
+```
+
+
+
 
