@@ -1,14 +1,27 @@
-.reveal h1 {font-size: 1.5em; text-transform: capitalize; text-shadow: 1px 1px 2px white;}
+.reveal h1 {
+    font-size: 1.5em;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 2px white;
+}
 
-.reveal h2 {font-size: 1.2em; text-transform: capitalize;
-    text-shadow: 1px 1px 2px white;}
+.reveal h2 {
+    font-size: 1.2em;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 2px white;
+}
 
-.reveal h3 {font-size: 0.6em; text-transform: capitalize;}
+.reveal h3 {
+    font-size: 0.6em;
+    text-transform: capitalize;
+}
 
-.reveal h4 {font-size: 0.4em; text-transform: capitalize;}
+.reveal h4 {
+    font-size: 0.4em;
+    text-transform: capitalize;
+}
 
 .slides em {
-    color:#e99a24;
+    color: #e99a24;
     font-style: normal;
 }
 
@@ -28,9 +41,11 @@
 .slides {
     font-size: 0.75em;
 }
+
 .reveal ul {
     display: block;
 }
+
 .reveal ol {
     display: block;
 }
@@ -41,6 +56,7 @@
     display: flex;
     align-items: center;
 }
+
 .col {
     flex: auto;
 }
@@ -53,13 +69,14 @@
 }
 
 .box-def-title {
-    background-color:#555555;
+    background-color: #555555;
     border: 4px solid #555555;
     border-radius: 20px 20px 0 0;
-    color:#fff;
+    color: #fff;
     margin: -2px;
-    font-weight:100;
+    font-weight: 100;
 }
+
 .box-def-title p {
     margin: 0;
     padding: 0;
@@ -72,13 +89,13 @@
     margin: 5px;
 }
 
-.box-ex-title{
-    background-color:#0a4a0c;
+.box-ex-title {
+    background-color: #0a4a0c;
     border: 4px solid #0a4a0c;
     border-radius: 20px 20px 0 0;
-    color:#fff;
+    color: #fff;
     margin: -2px;
-    font-weight:100;
+    font-weight: 100;
 }
 
 .box-ex-title p {
@@ -94,13 +111,13 @@
     margin: 5px;
 }
 
-.box-red-title{
-    background-color:#79070b;
+.box-red-title {
+    background-color: #79070b;
     border: 4px solid #79070b;
     border-radius: 20px 20px 0 0;
-    color:#fff;
+    color: #fff;
     margin: -2px;
-    font-weight:100;
+    font-weight: 100;
 }
 
 .box-red-title p {
