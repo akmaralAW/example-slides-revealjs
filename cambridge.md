@@ -27,7 +27,7 @@ controls: false
 - heterogeneous team of robots (different dynamics, actuation limits)
 :::
 ::: fragment
-- leverages the MAPF solver CBS, single robot kinodynamic motion planner, db-A*
+- leverages the MAPF solver CBS [@cbs], single robot kinodynamic motion planner, db-A* [@dbastar]
 :::
 ::: fragment
 - anytime, probabilistically complete, asymptotically optimal.
@@ -181,20 +181,23 @@ Only db-CBS solves these problems
 ## db-ECBS: Close-proximity flight scene
 
 <!-- - baseline: planner from NeuralSwarm2 - fails -->
+- environment: 2x0.4x1 m.
+- blue - small robots, orange - large robot
+
 ```{=html}
 <video data-autoplay src="media/video/NeuralSwarm2-example.mp4"></video>
 ```
 ## db-ECBS: Close-proximity flight scene
 
-- environment: 2x2x1 m.
-- blue - small robots, orange - large robot
+<!-- - environment: 2x2x1 m.
+- blue - small robots, orange - large robot -->
 <!-- - Time for the first solution = 0.30s. -->
 
 ![](media/image/dbecbs-swap3.png)
 
 ## db-ECBS: Close-proximity flight scene
 
-- environment: 2x4x2 m.
+- environment: 4x2x2 m.
 - window size: 0.5x0.5 m.
 <!-- - baseline: db-ECBS with conservative ellipsoid shape - 4/10 success rate -->
 
@@ -224,10 +227,10 @@ Only db-CBS solves these problems
 ::: {#refs}
 :::
 
-<!-- # Perception for Downwash prediction
+# Perception for Downwash prediction
 
 ## Use free yaw-angle rotation
 
 ```{=html}
 <video data-autoplay src="media/video/cvmrs-motivation.mp4"></video>
-``` -->
+```
