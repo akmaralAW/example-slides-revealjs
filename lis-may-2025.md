@@ -1,6 +1,6 @@
 ---
 title: Fast Replanning for Multi-Robot Kinodynamic Motion Planning
-subtitle: collaboration with Cambridge University
+subtitle: 
 author: Akmaral Moldagalieva
 date: 19.05.2025
 
@@ -20,10 +20,10 @@ controls: false
 
 ## Overview
 
-- Multi-Robot Navigation
+- Multi-Robot Coordination
 - Multi-Agent Path Finding
 - Multi-Robot Motion Planning
-- Research idea 
+- Collaboration Plan with K.Okumura (ProrokLab, Cambridge)
 <!-- - Conclusion -->
 
 
@@ -47,8 +47,11 @@ Aims to assign collision-free paths on graphs to each agent.
 Assumptions: 
 :::
 ::: fragment
-- graph representation of the world
+- grid cell represention of the world (unique length edges)
 - synchronized motion of agents
+![](media/image/db-lacam/mapf-example.png)
+[@okumura2024]
+
 :::
 
 ## MAPF solver: LaCam [@lacam] 
@@ -96,6 +99,9 @@ Hand-crafted motions can not generalize to complex robot dynamics
 
 ## Multi-Robot Motion Planning (MRMP)
 
+
+## Multi-Robot Motion Planning (MRMP)
+
 Takes into account robot dynamics and actuation limits. Each robot $\textit{i}$ has dynamics:
 
 $$
@@ -108,22 +114,23 @@ where $\mathbf{x}^{(i)} \in \mathcal{X}^{(i)} \subset \mathbb R^{d_{x^{(i)}}}$  
 
 
 
-## MRMP planner: db-CBS/db-ecbs [@moldagalieva2024]
+## MRMP planner: db-CBS/db-ECBS [@moldagalieva2024]
 
-Reasons robot dynamics, actuation limits and generalizes to heterogeneous robot teams
-
+Plans for each robot individually, and finds/resolves inter-robot collisions one-by-one. 
+Combines db-A* with trajectory optimization.
+<!-- Each robots's trajectory is allowed to have discontinuous jumps, that are repaired with trajectory optimization. -->
 ```{=html}
 <video data-autoplay src="media/video/db-lacam/dbcbs-dbecbs-main.mp4"></video>
 ```
 
-## MRMP planner: db-CBS/db-ecbs
+## MRMP planner: db-CBS/db-ECBS
 ::: {.container}
 
 :::: {.col .element: class="fragment" data-fragment-index="1"}
 ::::: {.box-ex}
-- has theoretical properties
-- robot dynamics are taken into account
+- reasons about robot dynamics
 - generalizes to heterogeneous robot teams
+- has theoretical properties
 :::::
 ::::
 
@@ -140,7 +147,7 @@ Reasons robot dynamics, actuation limits and generalizes to heterogeneous robot 
 
 :::
 
-## Collaboration with K.Okumura, ProrokLab at Cambridge
+## Collaboration with K.Okumura, ProrokLab, Cambridge
 
 ## db-LaCam
 
@@ -157,6 +164,7 @@ High-level plan
 ::::
 - Stay at ProrokLab, Cambridge: 1.07-30.09.2025
 - Robot dynamics: aeroplane with broken rudder, forklift, UAV
+- Scenarios: environment with newly emerging obstacles
 - Replan at: 20 Hz
 - Baselines: AMSwarm[@amswarm], CB-MPS[@cbs-mpc], lf, db-CBS[@moldagalieva2024]
 - Metrics: computation time, success rate, solution cost
