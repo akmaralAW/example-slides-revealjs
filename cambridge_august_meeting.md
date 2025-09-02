@@ -34,7 +34,16 @@ $$
 \end{align}
 $$
 
-Add wall4, forest4 examples.
+::: {.container}
+:::: {.col}
+forest with 4 robots 
+![](media/image/db-lacam/forest.png)
+::::
+:::: {.col}
+wall with 4 robtos
+![](media/image/db-lacam/wall.png)
+::::
+:::
 
 ## Benchmarking setup
 
@@ -67,16 +76,16 @@ now
 
 ## Improving db-lacam efficiency
 
-how much time improved
+![](media/image/db-lacam/plot1.png)
 
 ## Comparison with baselines
 
-add the plot (time vs. robot number)
+![](media/image/db-lacam/plot2.png)
 
 ## Next milestones
 
 ::: fragment
-- Improve the solution quality - Large Neighborhood Search (LNS)
+- Improve the solution quality
 :::
 ::: fragment
 - Demo (12 quadrotors in Cambridge, ground robot with trailer in Berlin)
