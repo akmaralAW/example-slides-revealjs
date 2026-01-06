@@ -1,8 +1,8 @@
 ---
-title: Planning for Heterogeneous Robot Teams
+title: Kinodynamic Motion Planning for Heterogeneous Robot Teams
 subtitle: Akmaral Moldagalieva
-author: Technical University of Berlin
-date: 07.01.2026
+author: Technical University of Berlin, Computer Science Department
+date: 07.01.2026, Nazarbayev University
 
 theme: white
 title-slide-attributes:
@@ -15,6 +15,17 @@ slideNumber: true
 navigationMode: 'linear'
 controls: false
 ---
+
+## Autonomy becomes Ubiquituos
+
+Industry 4.0
+![](media/image/nu/industry.png){width=800}
+
+<p style="font-size: 0.7em; color: gray;">Source: Keisuke Okumura</p>
+
+. . . 
+
+What is required to *build* these systems?
 
 ## The Classic Robotics Pipeline
 
@@ -31,22 +42,6 @@ Motion Planning is a *part of desicion making*: how to *reach the goal*, *given 
 ::::
 :::
 
-## Example Applications
-
-::: {.container}
-:::: {.col}
-Mobile Robots
-::::
-:::: {.col}
-Manipulators
-::::
-:::: {.col}
-Computer Games
-::::
-:::: {.col}
-Hybrid Systems
-::::
-:::
 
 ## Discrete vs. Continuous Planning 
 
@@ -72,12 +67,12 @@ Hybrid Systems
 ## From One Robot to Many: Multi-Robot Planning
 
 ::: {.container}
-:::: {.col}
+:::: {.col .element: class="fragment" data-fragment-index="1"}
 ```{=html}
 <video data-autoplay src="media/video/nu/alcove_unicycle_sphere1.mp4" width="100%"></video>
 ```
 ::::
-:::: {.col}
+:::: {.col .element: class="fragment" data-fragment-index="2"}
 ```{=html}
 <video data-autoplay src="media/video/nu/alcove_unicycle_sphere2.mp4" width="100%"></video>
 ```
@@ -125,7 +120,7 @@ Robots move on a graph, one step per timestep, from start to goal states.
   - sequence of states.
 ::::
 :::: {.col}
-![](media/image/nu/mapf_description.png)
+![](media/image/nu/mapf_description.png){width=500}
 
 ::::
 :::
@@ -141,7 +136,7 @@ Complexity - with each robot the joint configurations grows exponentially.
 ## MAPF Example
 
 ```{=html}
-<video data-autoplay src="media/video/nu/mapf-example.mp4" width="70%"></video>
+<video data-autoplay src="media/video/nu/mapf-example.mp4" width="60%"></video>
 ```
 <p style="font-size: 0.7em; color: gray;">Source: Keisuke Okumura</p>
 
@@ -526,9 +521,9 @@ Interaction force ($\psi$) remains within threshold.
 <video data-autoplay src="media/video/nu/wall.mp4" width="140%"></video>
 ```
 
-## db-ECBC: Deployment on Real Platforms 
+## db-ECBC: Real robot deployment
 
-Platforms: Polulu mobile robots with 60 cm bamboo sticks
+Platform: Polulu mobile robots with 60 cm bamboo sticks
 
 ```{=html}
 <video data-autoplay src="media/video/nu/dbecbs-polulu.mp4" width="140%"></video>
