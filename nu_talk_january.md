@@ -111,7 +111,6 @@ Kinodynamic Motion Planning (Continuous)
 
 # Multi-Agent Path Finding (MAPF)
 
-
 ## Multi-Agent Path Finding (MAPF)
 
 Robots move on a graph, one step per timestep, from start to goal states.
@@ -131,12 +130,20 @@ Robots move on a graph, one step per timestep, from start to goal states.
 ::::
 :::
 
+. . .
+
 ::::: {.box-white}
 Conflicts - egde and vertex.
 
 Complexity - with each robot the joint configurations grows exponentially.
 :::::
 
+## MAPF Example
+
+```{=html}
+<video data-autoplay src="media/video/nu/mapf-example.mp4" width="70%"></video>
+```
+<p style="font-size: 0.7em; color: gray;">Source: Keisuke Okumura</p>
 
 ## Why MAPF Is Not Enough for Real Robots?
 
@@ -238,8 +245,8 @@ Given these difficulties, what properties must a planner have?
 
 
 
-## db-CBS Discontinuity-bounded Conflict-based Search
-<p style="font-size: 0.7em; color: gray;">A. Moldagalieva, J.Ortiz-Haro, M.Toussaint, W.Honig (ICRA, 2024)</p>
+## db-CBS Discontinuity-bounded Conflict Search-based Multi-Robot Kinodynamic Motion Planner
+<p style="font-size: 0.7em; color: gray;">A. Moldagalieva, J.Ortiz-Haro, M.Toussaint, W.Honig (ICRA, 2024)</p> [@moldagalieva2024]
 
 ## db-CBS - Overview
 
@@ -263,7 +270,7 @@ It searches a graph of motion primitives:
 
 which follows robot dynamics $\mathbf{x}_{k+1} = \mathbf{f}(\mathbf{x}_k,\mathbf{u}_k)$
 
-## db-CBS - Background
+## db-CBS: Background
 
 The planner, db-CBS, is built upon two core ideas: 
 
@@ -322,7 +329,7 @@ Discontinuity-bounded A* (db-A*)
 
 :::
 
-## db-CBS - Approach
+## db-CBS: Approach
 
 - step 1: All robot trajectories are generated using db-A*
 
@@ -330,7 +337,7 @@ Discontinuity-bounded A* (db-A*)
 
 - step 3: Robot trajectories are optimized.
 
-## db-CBS - Approach
+## db-CBS: Approach
 
 Step 1: All single robot trajectories are generated with db-A*
 
@@ -340,7 +347,7 @@ Step 1: All single robot trajectories are generated with db-A*
   style="width: 100%; margin: 30px auto; display: block;">
 </video>
 
-## db-CBS - Approach
+## db-CBS: Approach
 
 Step 2: Inter-robot collisions are detected and resolved by imposing constraints
 
@@ -350,7 +357,7 @@ Step 2: Inter-robot collisions are detected and resolved by imposing constraints
   style="width: 100%; margin: 30px auto; display: block;">
 </video>
 
-## db-CBS - Approach
+## db-CBS: Approach
 
 Step 3: Discontinuities in collision-free trajectories are *repaired* with non-linear trajectory optimization
 
@@ -370,11 +377,36 @@ Add more primitives, decrease discontinuity
   style="width: 100%; margin: 30px auto; display: block;">
 </video>
 
-## Results? ...
+## db-CBS: Results
 
-## Summary
+- Alcove example
+- Dynamics: unicycle ($1^{(st)}$ order)
 
-db-CBS is an *optimal* kinodynamic planner, that can handle a team of robots with different dynamics, actuation limits and shapes.
+```{=html}
+<video data-autoplay src="media/video/nu/dbcbs-alcove.mp4" width="100%"></video>
+```
+
+## db-CBS: Results
+
+- AtGoal example
+- Dynamics: unicycle ($1^{(st)}$ order)
+
+```{=html}
+<video data-autoplay src="media/video/nu/dbcbs-atgoal.mp4" width="100%"></video>
+```
+
+## db-CBS: Results 
+
+- Random example (heterogeneous)
+- Dynamics: unicycle ($1^{(st)}, 2^{(nd)}$ order), car with trailer, double integrator
+
+```{=html}
+<video data-autoplay src="media/video/nu/dbcbs-scalability.mp4" width="100%"></video>
+```
+
+## db-CBS: Summary
+
+db-CBS is an *optimal* planner, that can handle a team of robots with different dynamics, actuation limits and shapes.
 
 . . . 
 
@@ -383,8 +415,8 @@ Does not scale beyond 8 robots, ignores interaction force between robots.
 :::::
 
 
-## db-ECBS: Interaction-Aware Planner
-<p style="font-size: 0.7em; color: gray;"> A.Moldagalieva, J.Ortiz-Haro, W.Hoenig (T-RO, 2025)</p>
+## db-ECBS: Interaction-Aware Kinodynamic Multi-Robot Motion Planner
+<p style="font-size: 0.7em; color: gray;"> A.Moldagalieva, J.Ortiz-Haro, W.Hoenig (T-RO, 2025)</p> [@dbecbs]
 
 ## db-ECBS: Motivation 
 
@@ -394,7 +426,15 @@ Existing planners ignore *aerodynamic force* between flying robots, which can re
 <video data-autoplay src="media/video/nu/downwash-effect.mp4" width="100%"></video>
 ```
 
-## db-ECBS: Interaction-Awareness 
+## db-ECBS: Interaction-Aware Planning
+
+Close-proximity flight scenarios with *aerodynamic force* between robots.
+
+```{=html}
+<video data-autoplay src="media/video/nu/dbecbs-uav.mp4" width="100%"></video>
+```
+
+## db-ECBS: Interaction-Aware Planning 
 
 ::: {.box-def}
 
@@ -488,13 +528,13 @@ Interaction force ($\psi$) remains within threshold.
 
 ## db-ECBC: Deployment on Real Platforms 
 
-Platforms: Crazyflie drones, Polulu mobile robots
+Platforms: Polulu mobile robots with 60 cm bamboo sticks
 
 ```{=html}
-<video data-autoplay src="media/video/nu/real-robots.mp4" width="140%"></video>
+<video data-autoplay src="media/video/nu/dbecbs-polulu.mp4" width="140%"></video>
 ```
 
-## Summary
+## db-ECBS: Summary
 
 db-ECBS is a kinodynamic planner, that scales up to *16 robots*, and reasons about *aerodynamic force* between flying robots.
 
@@ -505,12 +545,195 @@ Computationally heavy - slow, limited scalability.
 :::::
 
 
-## db-LaCAM: Fast and Scalable Planner 
+## db-LaCAM: Fast and Scalable Multi-Robot Kinodynamic Motion Planner with Discontinuity-bound Search and Lightweight MAPF
+
 <p style="font-size: 0.7em; color: gray;">A.Moldagalieva, K.Okumura, A.Prorok, W.Hoenig (AAAI, 2026)</p>
 
-## db-LaCAM: Cool Video
+## db-LaCAM: Fast and Scalable Planner
+
+Ten flying robots and four car-with-trailer robots.
+
+```{=html}
+<video data-autoplay src="media/video/nu/dblacam.mp4" width="100%"></video>
+```
+
+## db-LaCAM: Fast and Scalable Planner 
+
+Scales up to 50 robots.
+
+```{=html}
+<video data-autoplay src="media/video/nu/dblacam-scalability.mp4" width="100%"></video>
+```
 
 ## db-LaCAM: Approach 
 
+Our planner db-LaCAM, combines lightweight MAPF algorithm *LaCAM* [@lacam] and the idea of *discontinuity-bounded search*.
+
+. . .
+
+Generates feasible motion sequences over a *fixed-length horizon* using motion primitives.
+
+
+## db-LaCAM: Approach
+
+Planning fixed-length horizon motions
+
+::: {.box-def}
+
+::: {.r-stack}
+
+:::{.element: class="fragment current-visible"}
+![](media/image/nu/lacam_mrs1.png){width=600}
+
+Step 1: find applicable motions
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/nu/lacam_mrs2.png){width=600}
+
+Step 2: rollout applicable motions
+
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/nu/lacam_mrs3.png){width=600}
+
+Step 3: compute cost-to-go (h)
+
+:::: 
+:::{.element: class="fragment current-visible"}
+![](media/image/nu/lacam_mrs4.png){width=600}
+
+Step 4: sort motions based on h and cluster
+
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/nu/lacam_mrs5.png){width=600}
+
+Pick the *best* motions for robots
+
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/nu/lacam_mrs6.png){width=600}
+
+Rollout motions for the Robot 1 for the next horizon
+
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/nu/lacam_mrs7.png){width=600}
+
+Rollout motions for the Robot 2 for the next horizon
+
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/nu/lacam_mrs8.png){width=600}
+
+Potential collision between robots - *Priority Inheritance*
+
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/nu/lacam_mrs9.png){width=600}
+
+With priority inheritance Robot 2 plans its trajectory
+
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/nu/lacam_mrs10.png){width=600}
+
+Once Robot 2 has plan, Robot 1 reserves its motion
+
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/nu/lacam_mrs11.png){width=600}
+
+Continue planning until all robots reach their goal states.
+
+::::
+:::
+
+:::
+
 ## db-LaCAM: Results
 
+- Circle example with 10 robots
+- Dynamics: unicycle ($1^{(st)}$ order)
+
+```{=html}
+<video data-autoplay src="media/video/nu/dblacam-circle.mp4" width="100%"></video>
+```
+
+## db-LaCAM: Results
+
+- Maze example with 10 robots
+- Dynamics: unicycle ($1^{(st)}$ order)
+
+```{=html}
+<video data-autoplay src="media/video/nu/dblacam-maze.mp4" width="100%"></video>
+```
+
+## db-LaCAM: Results
+
+- Random example with 8 robots
+- Dynamics: unicycle ($1^{(st)}$ order)
+
+```{=html}
+<video data-autoplay src="media/video/nu/dblacam-random.mp4" width="100%"></video>
+```
+## db-LaCAM: Results
+
+- Random example with 50 robots
+- Dynamics: unicycle ($1^{(st)}$ order)
+
+```{=html}
+<video data-autoplay src="media/video/nu/dblacam-n50.mp4" width="100%"></video>
+```
+
+## db-LaCAM: Results
+
+- Forest example with 10 robots
+- Dynamics: flying robots (double integrator)
+
+```{=html}
+<video data-autoplay src="media/video/nu/dblacam-forest.mp4" width="100%"></video>
+```
+
+## db-LaCAM: Summary
+
+The planner db-LaCAM: 
+
+- resolution complete w.r.t motion primitives
+
+- works with *arbitrary* robot dynamics
+
+- up to x10 faster compared to sota planners
+
+. . .
+
+::::: {.box-red}
+Requires precise heuristics to guide the search - computationally expensive.
+:::::
+
+## Summary 
+
+. . .
+
+- Multi-robot planning is fundamentally hard
+
+. . .
+
+- Real robots make it harder
+
+. . .
+
+- No single planner is best
+
+. . .
+
+- The three planners illustrate this spectrum
+  - db-CBS: strong optimal guarantees
+  - db-ECBS: bounded suboptimal, but interaction-aware
+  - db-LaCAM: suboptima, but fast and scalable.
+
+
+## References
+
+::: {#refs}
+:::
