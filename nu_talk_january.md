@@ -727,6 +727,7 @@ Requires precise heuristics to guide the search - computationally expensive.
   - db-ECBS: bounded suboptimal, but interaction-aware
   - db-LaCAM: suboptima, but fast and scalable.
 
+# Thank you!
 
 ## References
 
