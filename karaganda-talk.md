@@ -2,7 +2,7 @@
 title: Kinodynamic Motion Planning for Heterogeneous Robot Teams
 subtitle: Akmaral Moldagalieva
 author: Technical University of Berlin, Computer Science Department
-date: 09.01.2026
+date: 09.04.2026
 
 theme: white
 title-slide-attributes:
@@ -228,3 +228,9 @@ Searches for *dynamically feasible*, *continuous time* trajectories for all robo
 ```{=html}
 <video data-autoplay src="media/video/nu/dbecbs-polulu.mp4" width="140%"></video>
 ```
+
+## 
+
+Raxmet!
+
+If you have questions contact me: moldagalieva@tu-berlin.de
