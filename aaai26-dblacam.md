@@ -17,7 +17,7 @@ controls: false
 # Multi-robot Kinodynamic Motion Planning: Fast, Real-world
 
 ```{=html}
-<video data-autoplay src="media/video/aaai/dblacam.mp4" width="100%"></video>
+<video data-autoplay loop muted playsinline src="media/video/icaps/icaps-gif.mp4" width="100%"></video>
 ```
 
 # Multi-robot Coordination 
@@ -52,7 +52,7 @@ Discrete vs. Continuous Motion Planning
 :::: {.col}
 ::: {.box-white}
 ```{=html}
-<video data-autoplay src="media/video/icaps/mapf-example.mp4" width="100%"></video>
+<video data-autoplay loop muted playsinline src="media/video/icaps/mapf-example.mp4" width="100%"></video>
 ```
 :::
 ::::
@@ -60,7 +60,7 @@ Discrete vs. Continuous Motion Planning
 :::: {.col}
 ::: {.box-white}
 ```{=html}
-<video data-autoplay src="media/video/icaps/mrmp-example.mp4" width="100%"></video>
+<video data-autoplay loop muted playsinline src="media/video/icaps/mrmp-example.mp4" width="100%"></video>
 ```
 :::
 ::::
@@ -159,6 +159,7 @@ db-LaCAM uses db-PIBT for *fixed-length horizon trajectory* planning using motio
 
 which follows robot dynamics $\mathbf{x}_{k+1} = \mathbf{f}(\mathbf{x}_k,\mathbf{u}_k)$
 
+
 # db-LaCAM: Approach
 
 Planning fixed-length horizon motions
@@ -233,16 +234,40 @@ Continue planning until all robots reach their goal states.
 
 ::::
 :::
-
 :::
+
+# db-LaCAM: Approach 
+
+Example search process using the motion primitives employed in this work
+
+![](media/image/icaps/motion-primitives-real.png){width=800}
+
+
+# db-LACAM: Heuristic Estimation with Hierarchical EST
+::: {.r-stack}
+:::{.element: class="fragment current-visible" data-fragment-index="1"}
+![](media/image/icaps/hest1.png)
+::::
+:::{.element: class="fragment current-visible" data-fragment-index="2"}
+![](media/image/icaps/hest2.png)
+::::
+:::{.element: class="fragment current-visible" data-fragment-index="3"}
+![](media/image/icaps/hest3.png)
+::::
+:::{.element: class="fragment current-visible" data-fragment-index="4"}
+![](media/image/icaps/hest4.png)
+::::
+:::
+
+
 
 # db-LaCAM: Experimental Results
 
 - Heterogeneous team
-- Dynamics: unicycle ($1^{(st)}$ order), double integrator
+- Dynamics: unicycle ($1^{(st)}$ order), flying robots (double integrator 3D)
 
 ```{=html}
-<video data-autoplay src="media/video/icaps/hetero_new4x.mp4" width="140%"></video>
+<video data-autoplay loop muted playsinline src="media/video/icaps/hetero_new4x.mp4" width="140%"></video>
 ```
 
 # db-LaCAM: Experimental Results
@@ -251,27 +276,33 @@ Continue planning until all robots reach their goal states.
 - Dynamics: unicycle ($1^{(st)}$ order)
 
 ```{=html}
-<video data-autoplay src="media/video/nu/dblacam-maze.mp4" width="100%"></video>
+<video data-autoplay loop muted playsinline src="media/video/nu/dblacam-maze.mp4" width="100%"></video>
 ```
 
-# db-LaCAM Experimental Results
+# db-LaCAM: Experimental Results
 
 - Random example with 50 robots
 - Dynamics: unicycle ($1^{(st)}$ order)
 
 ```{=html}
-<video data-autoplay src="media/video/nu/dblacam-n50.mp4" width="100%"></video>
+<video data-autoplay loop muted playsinline src="media/video/nu/dblacam-n50.mp4" width="100%"></video>
 ```
 
-# db-LaCAM Experimental Results
+# db-LaCAM: Experimental Results
 
 - Forest example with 10 robots
-- Dynamics: flying robots (double integrator)
+- Dynamics: flying robots (double integrator 3D)
 
 ```{=html}
-<video data-autoplay src="media/video/nu/dblacam-forest.mp4" width="100%"></video>
+<video data-autoplay loop muted playsinline src="media/video/nu/dblacam-forest.mp4" width="100%"></video>
 ```
+# db-LaCAM: Deployment on Real Robots
+- Video 1: flying robots (double integrator 3D) - Sanity drones
+- Video 2: car with trailer - Polulu 3pi+ 2040 with a trailer attached to it
 
+```{=html}
+<video data-autoplay loop muted playsinline src="media/video/aaai/dblacam.mp4" width="100%"></video>
+```
 
 # Conclusion and Limitations
 
@@ -287,7 +318,7 @@ We introduced db-LaCAM, a kinodynamic multi-robot motion planner that:
 
 . . . 
 
-- Is *resolution complete* w.r.t motion primitives
+- Is *resolution complete* w.r.t motion primitives.
 
 
 . . . 
@@ -295,4 +326,9 @@ We introduced db-LaCAM, a kinodynamic multi-robot motion planner that:
 Limitations: 
 
 - Expensive heuristic estimation
+
+
+# Time for Questions!
+
+![](media/image/icaps/qrcode.png){width=300}
 
