@@ -1,6 +1,6 @@
 ---
 title: "db-LaCAM: Fast and Scalable Multi-Robot Kinodynamic Motion Planning with Discontinuity-Bounded Search and Lightweight MAPF"
-subtitle: International Conference on Automated Planning and Scheduling (ICAPS) 2026
+# subtitle: International Conference on Automated Planning and Scheduling (ICAPS) 2026
 author: Akmaral Moldagalieva, Keisuke Okumura, Amanda Prorok, Wolfgang Hönig
 date: July 2, 2026
 theme: white
@@ -14,15 +14,54 @@ navigationMode: 'linear'
 controls: false
 ---
 
-# Multi-robot Kinodynamic Motion Planning: Fast, Real-world
+# 
+
 
 ```{=html}
 <video data-autoplay loop muted playsinline src="media/video/icaps/icaps-gif.mp4" width="100%"></video>
 ```
+. . .
 
-# Multi-robot Coordination 
+- Goal: Coordinate a team of robots, while respecting *robot dynamics*
 
-Discrete vs. Continuous Motion Planning
+. . . 
+
+- Contribution: A novel multi-robot *kinodynamic* motion planner which is <span style="color:green"><b>fast, scalable</b></span>.
+
+<!-- Multi-robot *kinodynamic* motion planning: <span style="color:green"><b>fast, real-world platforms</b></span> -->
+
+# Background: Robot Dynamics
+
+<!-- ::: {.box-def}
+:::: {.box-blue-title}
+Dynamics
+::::
+A function that describes the change of the configuration space, given the current configuration and control.
+:::
+
+. . . -->
+
+::: {.box-green}
+:::: {.box-green-title}
+Car with trailer Dynamics
+::::
+States $\mathbf{x} = (x, y, \theta_1, \theta_2)$, where $x,y$ is the position, and $\theta_1$, $\theta_2$ are the orientations for the car and trailer. Actions $\mathbf{u} = (v, \phi)$, where $v$ is linear velocity, $\phi$ the steerig angle. 
+$L$ is the car wheelbase, $L_h$ is the hitch length.
+The dynamics $\mathbf{\dot{x} = \mathbf{f}(\mathbf{x}, \mathbf{u})}$ are:
+
+$\dot{x} = v \cos \theta_1, \quad \dot{y} = v \sin \theta_1, \quad \dot{\theta_1} = \frac{v}{L}\tan \phi$,  $\quad \dot{\theta_2} = \frac{v}{L_h} \sin (\theta_1 - \theta_2)$
+
+:::
+
+![](media/image/icaps/car_with_trailer.png){width=400}
+
+. . .
+
+Motion planning now considers *how* to move, not just where.
+
+# Background: Multi-robot Coordination 
+
+Discrete vs. Continuous
 
 ::: {.container}
 :::: {.col .element: class="fragment" data-fragment-index="1"}
@@ -43,9 +82,9 @@ Discrete vs. Continuous Motion Planning
 
 :::
 
-# Multi-robot Coordination 
+# Background: Multi-robot Coordination 
 
-Discrete vs. Continuous Motion Planning
+Discrete vs. Continuous
 
 ::: {.container}
 
@@ -78,30 +117,34 @@ Discrete vs. Continuous Motion Planning
 :::: {.col}
 - Reason about <span style="color:green"><b>robot dynamics</b></span>
 - <span style="color:red"><b>Slow</b></span>
-- <span style="color:red"><b>Scale poorly</b></span> beyond a few robots
+- <span style="color:red"><b>Scale poorly</b></span> beyond few robots
 ::::
 
 :::
 
+. . . 
+
+Combine <span style="color:green"><b>strengths</b></span> of both methods.
 
 
-# Bridging MAPF and Kinodynamic Motion Planning
 
-db-LaCAM: *fast*, *scalable*, *dynamics-aware* motion planner for multi-robot systems.
+# Contribution
+
+db-LaCAM: *fast*, *scalable*, *dynamics-aware* motion planner for multi-robot systems, which:
 
 . . . 
 
-- Supports arbitrary robot dynamics
+- supports arbitrary robot dynamics
 
 . . . 
 
-- Up to 10x faster compared to SOTA kinodynamic motion planners
+- up to 10x faster compared to SOTA kinodynamic motion planners
 
 . . . 
 
-- Resolution-complete w.r.t motion primitives.
+- holds theoretical properties (resolution completeness).
 
-# db-LaCAM: Main Idea
+# db-LaCAM: Approach
 
 db-LaCAM is built upon *two* core ideas: 
 
@@ -111,11 +154,11 @@ db-LaCAM is built upon *two* core ideas:
 ::: {.box-def}
 :::: {.box-def-title}
 
-Discontinuity-bounded Search
+Discontinuity-bounded Search (W.Hönig, 2022)
 ::::
 ![](media/image/icaps/db-search.png){width=300}
 
-allows $\delta$ between states
+Allows $\delta$ between states ( $\mathbf{x}$ &rarr; $\mathbf{x_1}$)
 
 :::
 ::::
@@ -124,7 +167,7 @@ allows $\delta$ between states
 ::: {.box-def}
 :::: {.box-def-title}
 
-LaCAM algorithm
+LaCAM algorithm (K.Okumura, 2023)
 ::::
 ![](media/image/icaps/mapf_description.png){ width=450}
 
@@ -136,11 +179,20 @@ Search-based graph pathfinder
 
 # db-LaCAM: Approach
 
-Extending LaCAM to the continuous domain is non-trivial.
+Extending LaCAM to the continuous domain is non-trivial:
 
 . . . 
 
-::: {.box-def}
+- Continuous state space
+
+. . .
+
+- Constraints from robot dynamics
+
+. . .
+
+- Harder heuristic estimation - Euclidean distance fails
+<!-- ::: {.box-def}
 :::: {.box-def-title}
 Challenges
 ::::
@@ -148,7 +200,7 @@ Challenges
 - Continuous state space
 - Constraints from robot dynamics
 - Harder heuristic estimation - Euclidean distance fails.
-:::
+::: -->
 
 
 # db-LaCAM: Approach 
@@ -169,66 +221,66 @@ Planning fixed-length horizon motions
 ::: {.r-stack}
 
 :::{.element: class="fragment current-visible"}
-![](media/image/nu/lacam_mrs1.png){width=600}
+![](media/image/icaps/lacam_mrs1_new.png){width=700}
 
 Step 1: find applicable motions
 ::::
 :::{.element: class="fragment current-visible"}
-![](media/image/nu/lacam_mrs2.png){width=600}
+![](media/image/icaps/lacam_mrs2_new.png){width=700}
 
 Step 2: rollout applicable motions
 
 ::::
 :::{.element: class="fragment current-visible"}
-![](media/image/nu/lacam_mrs3.png){width=600}
+![](media/image/icaps/lacam_mrs3_new.png){width=700}
 
 Step 3: compute cost-to-go (h)
 
 :::: 
 :::{.element: class="fragment current-visible"}
-![](media/image/nu/lacam_mrs4.png){width=600}
+![](media/image/icaps/lacam_mrs4_new.png){width=700}
 
 Step 4: sort motions based on h-value and cluster
 
 ::::
 :::{.element: class="fragment current-visible"}
-![](media/image/nu/lacam_mrs5.png){width=600}
+![](media/image/icaps/lacam_mrs5_new.png){width=700}
 
 Pick the *best* motions for each robot
 
 ::::
 :::{.element: class="fragment current-visible"}
-![](media/image/nu/lacam_mrs6.png){width=600}
+![](media/image/icaps/lacam_mrs6_new.png){width=700}
 
 Rollout motions for the Robot 1 for the next horizon
 
 ::::
 :::{.element: class="fragment current-visible"}
-![](media/image/nu/lacam_mrs7.png){width=600}
+![](media/image/icaps/lacam_mrs7_new.png){width=700}
 
 Rollout motions for the Robot 2 for the next horizon
 
 ::::
 :::{.element: class="fragment current-visible"}
-![](media/image/nu/lacam_mrs8.png){width=600}
+![](media/image/icaps/lacam_mrs8_new.png){width=700}
 
 Potential collision between robots - *Priority Inheritance*
 
 ::::
 :::{.element: class="fragment current-visible"}
-![](media/image/nu/lacam_mrs9.png){width=600}
+![](media/image/icaps/lacam_mrs9_new.png){width=700}
 
 With priority inheritance Robot 2 plans its trajectory
 
 ::::
 :::{.element: class="fragment current-visible"}
-![](media/image/nu/lacam_mrs10.png){width=600}
+![](media/image/icaps/lacam_mrs10_new.png){width=700}
 
 Once Robot 2 has plan, Robot 1 reserves its motion
 
 ::::
 :::{.element: class="fragment current-visible"}
-![](media/image/nu/lacam_mrs11.png){width=600}
+![](media/image/icaps/lacam_mrs11_new.png){width=700}
 
 Continue planning until all robots reach their goal states.
 
@@ -242,11 +294,12 @@ Example search process using the motion primitives employed in this work
 
 ![](media/image/icaps/motion-primitives-real.png){width=800}
 
+# How is the search *guided* in kinodynamic settings?
 
 # db-LACAM: Heuristic Estimation with Hierarchical EST
 ::: {.r-stack}
 :::{.element: class="fragment current-visible" data-fragment-index="1"}
-![](media/image/icaps/hest1.png)
+![](media/image/icaps/hest1-arrow.png)
 ::::
 :::{.element: class="fragment current-visible" data-fragment-index="2"}
 ![](media/image/icaps/hest2.png)
@@ -260,6 +313,16 @@ Example search process using the motion primitives employed in this work
 :::
 
 
+<!-- # db-LACAM: Heuristic Estimation with Hierarchical EST
+
+![](media/image/icaps/motion_preparation.png){width=600} -->
+
+# db-LaCAM: Overall Performance
+
+- Dynamics: unicycle ($1^{(st)}$ order), flying robots (double integrator 3D), car with trailer
+- Baselines: db-CBS (A.Moldagalieva, 2024), db-ECBS (A.Moldagalieva, 2025)
+
+![](media/image/icaps/results-overall.png)
 
 # db-LaCAM: Experimental Results
 
@@ -304,7 +367,7 @@ Example search process using the motion primitives employed in this work
 <video data-autoplay loop muted playsinline src="media/video/aaai/dblacam.mp4" width="100%"></video>
 ```
 
-# Conclusion and Limitations
+# Summary
 
 We introduced db-LaCAM, a kinodynamic multi-robot motion planner that: 
 
@@ -328,7 +391,11 @@ Limitations:
 - Expensive heuristic estimation
 
 
-# Time for Questions!
+# Thank you for your attention!
 
 ![](media/image/icaps/qrcode.png){width=300}
+
+code: https://github.com/IMRCLab/db-lacam
+
+![](media/image/icaps/last.png)
 
