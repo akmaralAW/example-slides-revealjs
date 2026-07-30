@@ -1,6 +1,6 @@
 ---
 title: "db-LaCAM: Fast and Scalable Multi-Robot Kinodynamic Motion Planning with Discontinuity-Bounded Search and Lightweight MAPF"
-# subtitle: International Conference on Automated Planning and Scheduling (ICAPS) 2026
+# subtitle: ICAPS 2026
 author: Akmaral Moldagalieva, Keisuke Okumura, Amanda Prorok, Wolfgang Hönig
 date: July 2, 2026
 theme: white
@@ -351,14 +351,14 @@ Example search process using the motion primitives employed in this work
 <video data-autoplay loop muted playsinline src="media/video/nu/dblacam-n50.mp4" width="100%"></video>
 ```
 
-# db-LaCAM: Experimental Results
+<!-- # db-LaCAM: Experimental Results
 
 - Forest example with 10 robots
 - Dynamics: flying robots (double integrator 3D)
 
 ```{=html}
 <video data-autoplay loop muted playsinline src="media/video/nu/dblacam-forest.mp4" width="100%"></video>
-```
+``` -->
 # db-LaCAM: Deployment on Real Robots
 - Video 1: flying robots (double integrator 3D) - Sanity drones
 - Video 2: car with trailer - Polulu 3pi+ 2040 with a trailer attached to it
@@ -377,18 +377,27 @@ We introduced db-LaCAM, a kinodynamic multi-robot motion planner that:
 
 . . . 
 
-- Up to *10x faster runtime* compared to SOTA planners
+- Up to *10x faster runtime* compared to SoTA kinodynamic planners
 
 . . . 
 
 - Is *resolution complete* w.r.t motion primitives.
 
+. . . 
+
+Take Away : Kinodynamic multi-robot motion planner that is efficient (all dynamics), theoretically grounded remains an *open* challenge.
+
+
+<!-- . . . 
+
+- solution quality 
 
 . . . 
 
-Limitations: 
+- weaker theoretical properties
 
-- Expensive heuristic estimation
+. . .  -->
+
 
 
 # Thank you for your attention!

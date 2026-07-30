@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1920"
+   height="1080"
+   viewBox="0 0 508 285.75"
+   version="1.1"
+   id="svg961"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="phd-defense.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview963"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="true"
+     units="px"
+     inkscape:zoom="0.44785584"
+     inkscape:cx="702.2349"
+     inkscape:cy="679.90629"
+     inkscape:window-width="1850"
+     inkscape:window-height="1016"
+     inkscape:window-x="70"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="-76.005563,42.862657"
+       orientation="1,0"
+       id="guide1279" />
+    <sodipodi:guide
+       position="116.41667,-52.916672"
+       orientation="0,-1"
+       id="guide1281" />
+    <sodipodi:guide
+       position="-76.005563,40.384214"
+       orientation="1,0"
+       id="guide1283" />
+    <sodipodi:guide
+       position="550.33334,-52.916672"
+       orientation="0,-1"
+       id="guide1285" />
+    <sodipodi:guide
+       position="571.50001,-84.666673"
+       orientation="0,-1"
+       id="guide1287" />
+    <sodipodi:guide
+       position="560.91668,-52.916672"
+       orientation="0,-1"
+       id="guide1289" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid871"
+       spacingx="2.6458333"
+       spacingy="2.6458333" />
+  </sodipodi:namedview>
+  <defs
+     id="defs958">
+    <rect
+       x="749.99999"
+       y="599.99999"
+       width="350"
+       height="49.999999"
+       id="rect47165" />
+    <clipPath
+       id="clippath">
+      <path
+         d="M 46.56,0.21 C 46.27,0.28 45.99,0.38 45.71,0.49 27.58,7.87 13.41,21.86 5.8,39.9 1.94,49.05 0,58.69 0,68.33 v 0.04 c 0,9.35 1.81,18.69 5.44,27.61 1.05,2.59 3.55,4.16 6.19,4.16 0.84,0 1.69,-0.16 2.51,-0.49 3.42,-1.39 5.06,-5.28 3.67,-8.7 C 11.78,76.12 11.89,59.84 18.11,45.09 24.33,30.34 35.92,18.9 50.75,12.87 54.17,11.48 55.81,7.59 54.42,4.17 53.59,2.13 51.87,0.73 49.89,0.22 h -3.32 z"
+         fill="none"
+         id="path2" />
+    </clipPath>
+    <linearGradient
+       id="Unbenannter_Verlauf_21"
+       x1="-202.72"
+       y1="363.89999"
+       x2="-201.72"
+       y2="363.89999"
+       gradientTransform="matrix(94.9,0,0,-94.9,18370.088,34701.244)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#fff"
+         stop-opacity="0"
+         id="stop5" />
+      <stop
+         offset=".18"
+         stop-color="#3aa7df"
+         stop-opacity=".2"
+         id="stop7" />
+      <stop
+         offset=".44"
+         stop-color="#3aa7df"
+         stop-opacity=".35"
+         id="stop9" />
+      <stop
+         offset="1"
+         stop-color="#3aa7df"
+         id="stop11" />
+    </linearGradient>
+    <clipPath
+       id="clippath-1">
+      <path
+         d="m 132.49,37.1 c -3.42,1.39 -5.06,5.28 -3.67,8.7 6.03,14.83 5.93,31.12 -0.29,45.86 -6.22,14.75 -17.81,26.19 -32.64,32.22 -1.88,0.76 -3.22,2.28 -3.82,4.06 v 4.24 c 0.05,0.13 0.09,0.26 0.15,0.39 0.69,1.7 2.01,2.97 3.58,3.63 h 5.22 c 18.08,-7.38 32.22,-21.36 39.82,-39.36 7.61,-18.03 7.73,-37.95 0.36,-56.08 -1.05,-2.59 -3.55,-4.16 -6.19,-4.16 -0.84,0 -1.69,0.16 -2.51,0.49"
+         fill="none"
+         id="path14" />
+    </clipPath>
+    <linearGradient
+       id="Unbenannter_Verlauf_22"
+       x1="-207.67"
+       y1="367.51001"
+       x2="-206.67"
+       y2="367.51001"
+       gradientTransform="matrix(-108.02,0,0,108.02,-23119.46,-39522.147)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#fff"
+         stop-opacity="0"
+         id="stop17" />
+      <stop
+         offset=".18"
+         stop-color="#3aa7df"
+         stop-opacity=".2"
+         id="stop19" />
+      <stop
+         offset=".44"
+         stop-color="#3aa7df"
+         stop-opacity=".35"
+         id="stop21" />
+      <stop
+         offset="1"
+         stop-color="#3aa7df"
+         id="stop23" />
+    </linearGradient>
+    <clipPath
+       id="clippath-3">
+      <rect
+         width="441.42999"
+         height="136.74001"
+         fill="none"
+         id="rect1577"
+         x="0"
+         y="0" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:9.87778px;line-height:1.25;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre, Normal';word-spacing:0px;stroke-width:0.264583"
+       x="204.19418"
+       y="144.57031"
+       id="text6226"><tspan
+         sodipodi:role="line"
+         id="tspan6224"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+         x="204.19418"
+         y="144.57031">Akmaral Moldagalieva</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:9.87778px;stroke-width:0.264583"
+         x="204.19418"
+         y="157.23595"
+         id="tspan8038">       <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:sans-serif;-inkscape-font-specification:sans-serif"
+   id="tspan59651">PhD Defense</tspan></tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+         x="204.19418"
+         y="169.90157"
+         id="tspan8040">          TU Berlin</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+         x="204.19418"
+         y="182.5672"
+         id="tspan8294">      August 24 2026</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre, Normal';word-spacing:0px;stroke-width:0.264583"
+       x="11.112501"
+       y="214.31245"
+       id="text14318"><tspan
+         sodipodi:role="line"
+         id="tspan14316"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+         x="11.112501"
+         y="214.31245">Doctoral Committee</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+         x="11.112501"
+         y="228.42358"
+         id="tspan17426"> - Reviewer: Nora Ayanian (Brown University)</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+         x="11.112501"
+         y="242.5347"
+         id="tspan17428"> - Reviewer: Sven Koenig (UC Irvine)</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+         x="11.112501"
+         y="256.64581"
+         id="tspan17430"> - Reviewer and PhD Advisor: Wolfgang Hönig (TU Berlin)</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+         x="11.112501"
+         y="270.75693"
+         id="tspan18560"> - Chair: Marc Toussaint (TU Berlin)</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:11.2889px;stroke-width:0.264583"
+         x="11.112501"
+         y="284.86807"
+         id="tspan15266" /></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text47163"
+       style="line-height:1.25;font-family:'DejaVu Math TeX Gyre';font-size:24px;-inkscape-font-specification:'DejaVu Math TeX Gyre, Normal';word-spacing:0px;white-space:pre;shape-inside:url(#rect47165)" />
+  </g>
+</svg>
