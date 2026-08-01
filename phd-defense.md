@@ -99,9 +99,58 @@ Autonomy of a team of robots requires being able to reach the goal quickly while
 
 # Multi-Robot Coordination: Related Work {#intro}
 
-- MAPF 
-- Optimization-based 
-- MAPF/POST
+::: {.container}
+
+:::: {.col}
+::: {.box-def}
+:::: {.box-blue-title}
+MAPF
+::::
+- Optimal graph planning
+- Scales to > 1000 agents
+- <span style="color:red">Ignores robot dynamics</span>
+<img src="media/image/phd-defense/mapf.png" width="100%">
+
+<div style="font-size:0.45em; color:gray; margin-top:0.1em;">
+Sharon et al., 2015; Sharon et al., 2015; Sharon et al., 2015; 
+</div>
+
+:::
+::::
+
+:::: {.col}
+::: {.box-def}
+:::: {.box-blue-title}
+MAPF + Post-processing
+::::
+- Dynamically feasible
+- Smooth trajectories
+- <span style="color:red">Suboptimal trajectories</span>
+<img src="media/image/phd-defense/mapf-post.png" width="100%">
+
+<div style="font-size:0.45em; color:gray; margin-top:0.1em;">
+Sharon et al., 2015; Sharon et al., 2015; Sharon et al., 2015; 
+</div>
+:::
+::::
+
+:::: {.col}
+::: {.box-def}
+:::: {.box-blue-title}
+Differential Flatness 
+::::
+- Scale well
+- <span style="color:red">Actuation limits ignored</span>
+- <span style="color:red">Limited dynamics</span> 
+<img src="media/image/phd-defense/diff-flatness.png" width="100%">
+
+<div style="font-size:0.45em; color:gray; margin-top:0.1em;">
+Sharon et al., 2015; Sharon et al., 2015; Sharon et al., 2015; 
+</div>
+:::
+::::
+
+:::
 
 
 # Research Statement
@@ -112,3 +161,35 @@ Autonomy of a team of robots requires being able to reach the goal quickly while
 ::::
 Design a unified, theoretically grounded motion planning framework for heterogeneous robots that respects each robot’s kinodynamic constraints.
 :::
+
+
+# Presentation Overview
+
+<ul class="overview">
+  <li>Introduction: Multi-Robot Coordination</li>
+  <li class="active">Kinodynamic Motion Planning for Multi-Robot Systems </li>
+</ul>
+
+<div class="three-columns">
+
+<div>
+<b>Part I</b><br>
+Time-Optimal Motion Planning
+<img src="media/image/phd-defense/partI.png" width="50%">
+</div>
+
+<div>
+<b>Part I</b><br>
+Interaction Awareness for Motion Planning
+<img src="media/image/phd-defense/partII.png" width="50%">
+</div>
+
+<div>
+<b>Part I</b><br>
+Safe, Fast Motion Planning
+<img src="media/image/phd-defense/partIII.png" width="50%">
+</div>
+
+</div>
+
+- Conclusion and Future Work
