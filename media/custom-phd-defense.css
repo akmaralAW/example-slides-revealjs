@@ -226,3 +226,7 @@
 #intro h1 {
   margin-top: 20px;
 }
+
+#preview h1 {
+  margin-top: -10px;
+}

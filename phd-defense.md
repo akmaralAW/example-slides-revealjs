@@ -159,23 +159,29 @@ Sharon et al., 2015; Sharon et al., 2015; Sharon et al., 2015;
 :::: {.box-green-title}
 
 ::::
-Design a unified, theoretically grounded motion planning framework for heterogeneous robots that respects each robot’s kinodynamic constraints.
+Design a unified, *theoretically grounded* motion planning framework for *heterogeneous* robots that respects each robot’s *kinodynamic* constraints.
 :::
 
 
-# Presentation Overview
+# Presentation Overview {#preview}
 
 <ul class="overview">
   <li>Introduction: Multi-Robot Coordination</li>
-  <li class="active">Kinodynamic Motion Planning for Multi-Robot Systems </li>
+  <li>Kinodynamic Motion Planning for Multi-Robot Systems </li>
 </ul>
 
 <div class="three-columns">
 
 <div>
-<b>Part I</b><br>
-Time-Optimal Motion Planning
+<b><span style="color:#0072B2;">Part I</span></b><br>
+<span style="color:#0072B2;">Time-Optimal Motion Planning</span>
 <img src="media/image/phd-defense/partI.png" width="50%">
+
+<div style="font-size:0.75em;">
+  <strong>(Ch. 4 – ICRA 2024)</strong><br>
+  (Ch. 5 – Preprint)
+</div>
+
 </div>
 
 <div>
@@ -193,3 +199,30 @@ Safe, Fast Motion Planning
 </div>
 
 - Conclusion and Future Work
+
+
+# Part I. Time-Optimal Kinodynamic Motion Planning for Multi-Robot Systems {#preview}
+
+
+# Part I. Time-Optimal Kinodynamic Motion Planning for Multi-Robot Systems {#preview}
+
+::: {.r-stack}
+:::{.element: class="fragment"}
+![](media/image/phd-defense/flowchart-1.png)
+::::
+:::{.element: class="fragment"}
+![](media/image/phd-defense/flowchart-2.png)
+::::
+:::{.element: class="fragment"}
+![](media/image/phd-defense/flowchart-3.png)
+::::
+:::{.element: class="fragment"}
+![](media/image/phd-defense/flowchart-4.png)
+:::: 
+:::{.element: class="fragment"}
+![](media/image/phd-defense/flowchart-5.png)
+::::
+:::{.element: class="fragment"}
+![](media/image/phd-defense/flowchart-6.png)
+::::
+:::
