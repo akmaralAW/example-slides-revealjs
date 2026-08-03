@@ -262,7 +262,8 @@ Time-Optimal Motion Planning
 
 <div style="font-size:0.75em;">
   <strong>(Ch. 6 – T-RO 2025)</strong><br>
-  <strong>(Ch. 7 – MRS 2023)</strong><br>
+  <!-- <strong>(Ch. 7 – MRS 2023)</strong><br> -->
+  (Ch. 7 – MRS 2023)
 
 </div>
 
@@ -278,3 +279,24 @@ Safe, Fast Motion Planning
 </div>
 
 - Conclusion and Future Work
+
+# Part II. Interaction Awareness for Motion Planning {#preview}
+
+# Part II. Interaction Awareness for Motion Planning {#preview}
+
+```{=html}
+<video data-autoplay loop muted playsinline src="media/video/phd-defense/downwash.mp4" width="100%"></video>
+```
+
+. . . 
+
+::::: {.box-red}
+Robots can deviate from planned trajectories, leading to crash.
+:::::
+
+# Part II. Interaction Awareness for Motion Planning {#preview}
+
+![](media/image/phd-defense/flowchart-dbecbs-1.png)
+<div style="position:absolute; bottom:20px; left:40px; right:40px; font-size:0.75em; color:gray;">
+Moldagalieva, A., Ortiz-Haro, J., Hönig, W. (2025) <i>db-ECBS: Interaction-Aware Multirobot Kinodynamic Motion Planning</i>, IEEE Transactions on Robotics (T-RO).
+</div>
