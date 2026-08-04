@@ -294,9 +294,75 @@ Safe, Fast Motion Planning
 Robots can deviate from planned trajectories, leading to crash.
 :::::
 
+# Part II. Contributions
+
 # Part II. Interaction Awareness for Motion Planning {#preview}
 
 ![](media/image/phd-defense/flowchart-dbecbs-1.png)
 <div style="position:absolute; bottom:20px; left:40px; right:40px; font-size:0.75em; color:gray;">
 Moldagalieva, A., Ortiz-Haro, J., Hönig, W. (2025) <i>db-ECBS: Interaction-Aware Multirobot Kinodynamic Motion Planning</i>, IEEE Transactions on Robotics (T-RO).
 </div>
+
+# db-ECBS: Interaction-Aware Motion Planner {#preview}
+
+::: {.r-stack}
+
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dbecbs-2.png)
+
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dbecbs-3.png)
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dbecbs-4.png)
+:::: 
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dbecbs-5.png)
+::::
+:::{.element: class="fragment"}
+![](media/image/phd-defense/flowchart-dbecbs-6.png)
+::::
+:::
+
+# db-ECBS: Results {#preview}
+
+
+# Presentation Overview {#preview}
+
+<ul class="overview">
+  <li>Introduction: Multi-Robot Coordination</li>
+  <li>Kinodynamic Motion Planning for Multi-Robot Systems </li>
+</ul>
+
+<div class="three-columns">
+
+<div>
+<b>Part I</b><br>
+Time-Optimal Motion Planning
+<img src="media/image/phd-defense/partI.png" width="50%">
+
+</div>
+
+<div>
+<b>Part II</b><br>
+Interaction Awareness for Motion Planning
+<img src="media/image/phd-defense/partII.png" width="50%">
+
+</div>
+
+<div>
+<b><span style="color:#0072B2;">Part III</span></b><br>
+<span style="color:#0072B2;">Safe, Fast Motion Planning</span>
+<img src="media/image/phd-defense/partIII.png" width="50%">
+
+<div style="font-size:0.75em;">
+  <strong>(Ch. 7 – ICAPS 2026)</strong><br>
+
+</div>
+
+</div>
+
+</div>
+
+- Conclusion and Future Work
