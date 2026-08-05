@@ -239,6 +239,9 @@ Moldagalieva, A., Ortiz-Haro, J., Toussaint, M., Hönig, W. (2024)<i>db-CBS: Dis
 # db-CBS: Results {#preview}
 
 
+# db-CBS: Limitations{#preview}
+
+
 # Presentation Overview {#preview}
 
 <ul class="overview">
@@ -327,6 +330,8 @@ Moldagalieva, A., Ortiz-Haro, J., Hönig, W. (2025) <i>db-ECBS: Interaction-Awar
 
 # db-ECBS: Results {#preview}
 
+# db-ECBS: Limitations {#preview}
+
 
 # Presentation Overview {#preview}
 
@@ -366,3 +371,46 @@ Interaction Awareness for Motion Planning
 </div>
 
 - Conclusion and Future Work
+
+# Part III. Fast, Scalable Multi-Robot Motion Planning {#preview}
+
+# Part III. Contributions {#preview}
+
+# Part III.  Fast, Scalable Multi-Robot Motion Planning {#preview}
+
+![](media/image/phd-defense/flowchart-dblacam-1.png)
+<div style="position:absolute; bottom:20px; left:40px; right:40px; font-size:0.75em; color:gray;">
+Moldagalieva, A., Okumura, K., Prorok, A., Hönig, W. (2026) <i> db-lacam: Fast and scalable multi-robot kinodynamic motion planning with discontinuity-bounded search and lightweight MAPF</i>, International Conference on Automated Planning and Scheduling (ICAPS).
+</div>
+
+
+# db-LaCAM: Fast, Scalable Motion Planner {#preview}
+
+::: {.r-stack}
+
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dblacam-2.png)
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dblacam-3.png)
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dblacam-4.png)
+:::: 
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dblacam-5.png)
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dblacam-6.png)
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dblacam-6.5.png)
+::::
+:::{.element: class="fragment"}
+![](media/image/phd-defense/flowchart-dblacam-7.png)
+::::
+:::
+
+# db-LaCAM: Results {#preview}
+
+# db-LaCAM: Limitations {#preview}
