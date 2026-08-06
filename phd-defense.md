@@ -23,27 +23,42 @@ Multiple robots can accomplish tasks that are impossible, inefficient, or unsafe
 
 Autonomy of a team of robots requires being able to reach the goal quickly while avoiding collisions with obstacles and other robots.
 
+# Multi-Robot Coordination {#preview}
+
+![](media/image/phd-defense/research-overview-1.png)
 
 # Multi-Robot Coordination {#preview}
 
 ::: {.r-stack}
-:::{.element: class="fragment current-visible"}
-![](media/image/phd-defense/research-overview-1.png)
-::::
-:::{.element: class="fragment current-visible"}
+:::{.current-visible data-fragment-index="1"}
 ![](media/image/phd-defense/research-overview-2.png)
 ::::
-:::{.element: class="fragment current-visible"}
+:::{.fragment .current-visible data-fragment-index="2"}
 ![](media/image/phd-defense/research-overview-3.png)
 :::: 
-:::{.element: class="fragment current-visible"}
+:::{.fragment .current-visible data-fragment-index="3"}
 ![](media/image/phd-defense/research-overview-4.png)
 ::::
-
 :::
 
-# Research Summary 
 
+### Key Challenges
+
+::: {data-fragment-index="1"}
+- Time-Optimality:
+:::
+
+::: {.fragment  data-fragment-index="2"}
+- Interaction-Awareness:
+:::
+
+::: {.fragment data-fragment-index="3"}
+- Scalability, Efficiency: 
+:::
+
+
+
+# Thesis Contributions 
 
 <div class="three-columns">
 
