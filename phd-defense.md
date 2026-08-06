@@ -13,6 +13,68 @@ navigationMode: 'linear'
 controls: false
 ---
 
+# Autonomous Multi-Robot Systems
+
+Multiple robots can accomplish tasks that are impossible, inefficient, or unsafe for a single robot, enabling *scalable*, *robust*, and *efficient* operation in complex environments.
+
+<img src="media/image/phd-defense/applications.png" width="100%">
+
+. . . 
+
+Autonomy of a team of robots requires being able to reach the goal quickly while avoiding collisions with obstacles and other robots.
+
+
+# Multi-Robot Coordination {#preview}
+
+::: {.r-stack}
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/research-overview-1.png)
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/research-overview-2.png)
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/research-overview-3.png)
+:::: 
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/research-overview-4.png)
+::::
+
+:::
+
+# Research Summary 
+
+
+<div class="three-columns">
+
+<div>
+Time-Optimal Motion Planning
+<img src="media/image/phd-defense/partI.png" width="50%">
+
+<!-- <div style="font-size:0.75em;">
+  (ICRA 2024, Preprint)
+</div> -->
+</div>
+
+<div>
+Interaction Awareness for Motion Planning
+<img src="media/image/phd-defense/partII.png" width="50%">
+<!-- <div style="font-size:0.75em;">
+  (T-RO 2025, MRS 2023)
+</div> -->
+</div>
+
+<div>
+Safe, Fast Motion Planning
+<img src="media/image/phd-defense/partIII.png" width="50%">
+
+<!-- <div style="font-size:0.75em;">
+  (ICAPS 2026)
+</div> -->
+</div>
+
+</div>
+
 # Presentation Overview
 
 <ul class="overview">
@@ -75,16 +137,6 @@ Safe, Fast Motion Planning
 
 - Conclusion and Future Work
 
-
-# Autonomous Multi-Robot Systems
-
-Multiple robots can accomplish tasks that are impossible, inefficient, or unsafe for a single robot, enabling *scalable*, *robust*, and *efficient* operation in complex environments.
-
-<img src="media/image/phd-defense/applications.png" width="100%">
-
-. . . 
-
-Autonomy of a team of robots requires being able to reach the goal quickly while avoiding collisions with obstacles and other robots.
 
 
 # Multi-Robot Motion Planning {#intro}
@@ -161,14 +213,6 @@ Sharon et al., 2015; Sharon et al., 2015; Sharon et al., 2015;
 ::::
 Design a unified, *theoretically grounded* motion planning framework for *heterogeneous* robots that respects each robot’s *kinodynamic* constraints.
 :::
-
-# Background
-
-- Robot Dynamics
-
-- Motion Primitives
-
-- Discontinuity-bounded Search
 
 # Presentation Overview {#preview}
 
