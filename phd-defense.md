@@ -91,36 +91,6 @@ Research Vision
 Design a unified, *theoretically grounded* motion planning framework for *heterogeneous* robots that respects each robot’s *kinodynamic* constraints.
 :::
 
-<!-- # Presentation Overview
-
-<ul class="overview">
-  <li>Introduction, Background</li>
-  <li> Kinodynamic Motion Planning for Multi-Robot Systems</li>
-</ul>
-
-<div class="three-columns">
-
-<div>
-<b>Part I</b><br>
-Time-Optimal Motion Planning
-<img src="media/image/phd-defense/partI.png" width="50%">
-</div>
-
-<div>
-<b>Part II</b><br>
-Interaction Awareness for Motion Planning
-<img src="media/image/phd-defense/partII.png" width="50%">
-</div>
-
-<div>
-<b>Part III</b><br>
-Safe, Fast Motion Planning
-<img src="media/image/phd-defense/partIII.png" width="50%">
-</div>
-
-</div>
-
-- Conclusion and Future Work -->
 
 # Presentation Overview
 
@@ -162,7 +132,26 @@ Safe, Fast Motion Planning
 
 Move each robot from its start state ($\mathbf{s}_1$, $\mathbf{s}_2$) to its goal state ($\mathbf{g}_1$, $\mathbf{g}_2$) while avoiding obstacles and collisions with other robots, and respecting *robot dynamics*.
 
-# Background: Robot Dynamics
+
+# Background: Robot Dynamics {#preview}
+
+Dynamics - function that describes the change of the configuration space, given the current configuration and control.
+
+. . .
+
+::: {.box-green}
+:::: {.box-green-title}
+Car with trailer Dynamics
+::::
+States $\mathbf{x} = (x, y, \theta_1, \theta_2)$, where $x,y$ is the position, and $\theta_1$, $\theta_2$ are the orientations for the car and trailer. Actions $\mathbf{u} = (v, \phi)$, where $v$ is linear velocity, $\phi$ the steerig angle. 
+$L$ is the car wheelbase, $L_h$ is the hitch length.
+The dynamics $\mathbf{\dot{x} = \mathbf{f}(\mathbf{x}, \mathbf{u})}$ are:
+
+$\dot{x} = v \cos \theta_1, \quad \dot{y} = v \sin \theta_1, \quad \dot{\theta_1} = \frac{v}{L}\tan \phi$,  $\quad \dot{\theta_2} = \frac{v}{L_h} \sin (\theta_1 - \theta_2)$
+
+:::
+
+![](media/image/icaps/car_with_trailer.png){width=400}
 
 # Presentation Overview
 
@@ -275,12 +264,12 @@ Sharon et al., 2015; Sharon et al., 2015; Sharon et al., 2015;
 :::: {.col}
 ::: {.box-def}
 :::: {.box-blue-title}
-Differential Flatness 
+Bezier/Spline-based 
 ::::
 - Scale well
 - <span style="color:red">Actuation limits ignored</span>
 - <span style="color:red">Limited dynamics</span> 
-<img src="media/image/phd-defense/diff-flatness.png" width="100%">
+<img src="media/image/phd-defense/bezier-based-method.png" width="100%">
 
 <div style="font-size:0.45em; color:gray; margin-top:0.1em;">
 Sharon et al., 2015; Sharon et al., 2015; Sharon et al., 2015; 
