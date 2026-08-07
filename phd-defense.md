@@ -346,7 +346,15 @@ Moldagalieva, A., Ortiz-Haro, J., Toussaint, M., Hönig, W. (2024)<i>db-CBS: Dis
 
 # db-CBS: Theoretical Properties {#preview}
 
-# db-CBS: Performance Evaluations {#preview} 
+<div class="empty-box">
+By adding more motion primitives and reducing disconinuity bound, the discrete search space becomes increasingly rich, yielding *asymptotic optimality*. 
+Asymptotic optimality implies *probabilistic completeness*.
+</div>
+
+
+# db-CBS: Performance Evaluation {#preview} 
+
+
 
 # db-CBS is great, but ... {#preview}
 
@@ -436,7 +444,7 @@ Research Gap
 
 
 ```{=html}
-<video data-autoplay loop muted playsinline src="media/video/phd-defense/dbecbs-intro.mp4" width="70%"></video>
+<video data-autoplay loop muted playsinline src="media/video/phd-defense/dbecbs-intro.mp4" width="80%"></video>
 ```
 
 <div style="position:absolute; bottom:-100px; left:40px; right:40px; font-size:0.75em; color:gray;">
@@ -469,7 +477,14 @@ Moldagalieva, A., Ortiz-Haro, J., Hönig, W. (2025) <i>db-ECBS: Interaction-Awar
 ::::
 :::
 
-# db-ECBS: Results {#preview}
+# db-ECBS: Theoretical Properties {#preview}
+
+<div class="empty-box">
+As in db-CBS, adding more motion primitives and reducing the discontinuity bound progressively enriches the search space, yielding *asymptotic bounded suboptimality* and *probabilistic completeness*.
+</div>
+
+
+# db-ECBS: Performance Evaluation {#preview}
 
 
 # db-ECBS: Limitations {#preview}
