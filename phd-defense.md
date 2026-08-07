@@ -319,8 +319,7 @@ Moldagalieva, A., Ortiz-Haro, J., Toussaint, M., Hönig, W. (2024)<i>db-CBS: Dis
 </div>
 
 
-# db-CBS: Main Idea {#preview}
-
+<!-- # db-CBS: Main Idea {#preview} -->
 
 # db-CBS: How it works? {#preview}
 
@@ -347,10 +346,20 @@ Moldagalieva, A., Ortiz-Haro, J., Toussaint, M., Hönig, W. (2024)<i>db-CBS: Dis
 
 # db-CBS: Theoretical Properties {#preview}
 
-# db-CBS: Performance Evaluatiosns {#preview} 
+# db-CBS: Performance Evaluations {#preview} 
 
-# db-CBS: Limitations{#preview}
+# db-CBS is great, but ... {#preview}
 
+. . . 
+
+- Scales only up to 8 robots - computationally expensive
+- Ignore residual force between robots.
+
+. . . 
+
+::: {.box-green}
+Part II addresses these limitations.
+:::
 
 # Presentation Overview {#preview}
 
@@ -395,7 +404,8 @@ Safe, Fast Motion Planning
 
 # Part II. Interaction Awareness for Motion Planning {#preview}
 
-# Part II. Interaction Awareness for Motion Planning {#preview}
+
+# Aerodynamic Force between Flying Robots {#preview}
 
 ```{=html}
 <video data-autoplay loop muted playsinline src="media/video/phd-defense/downwash.mp4" width="100%"></video>
@@ -407,19 +417,40 @@ Safe, Fast Motion Planning
 Robots can deviate from planned trajectories, leading to crash.
 :::::
 
-# Part II. Contributions
+# Related Work
 
-# Part II. Interaction Awareness for Motion Planning {#preview}
+. . . 
 
-![](media/image/phd-defense/flowchart-dbecbs-1.png)
-<div style="position:absolute; bottom:20px; left:40px; right:40px; font-size:0.75em; color:gray;">
+Research Gap
+
+
+# db-ECBS: Interaction-Aware Multi-Robot Kinodynamic Motion Planning {#preview}
+
+. . . 
+
+::: {.box-green}
+- Probabilistically complete and asymptotically optimal
+- Reasons about interaction force between robots
+- Scales up to 16 robots
+:::
+
+
+```{=html}
+<video data-autoplay loop muted playsinline src="media/video/phd-defense/dbecbs-intro.mp4" width="70%"></video>
+```
+
+<div style="position:absolute; bottom:-100px; left:40px; right:40px; font-size:0.75em; color:gray;">
 Moldagalieva, A., Ortiz-Haro, J., Hönig, W. (2025) <i>db-ECBS: Interaction-Aware Multirobot Kinodynamic Motion Planning</i>, IEEE Transactions on Robotics (T-RO).
 </div>
 
-# db-ECBS: Interaction-Aware Motion Planner {#preview}
+
+# db-ECBS: How It Works? {#preview}
 
 ::: {.r-stack}
 
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dbecbs-1.png)
+::::
 :::{.element: class="fragment current-visible"}
 ![](media/image/phd-defense/flowchart-dbecbs-2.png)
 
@@ -439,6 +470,7 @@ Moldagalieva, A., Ortiz-Haro, J., Hönig, W. (2025) <i>db-ECBS: Interaction-Awar
 :::
 
 # db-ECBS: Results {#preview}
+
 
 # db-ECBS: Limitations {#preview}
 
@@ -524,3 +556,11 @@ Moldagalieva, A., Okumura, K., Prorok, A., Hönig, W. (2026) <i> db-lacam: Fast 
 # db-LaCAM: Results {#preview}
 
 # db-LaCAM: Limitations {#preview}
+
+# Conclustion 
+
+# Future Work
+
+# Thanks 
+
+# References
