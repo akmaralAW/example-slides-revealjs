@@ -45,20 +45,20 @@ Autonomy of a team of robots requires being able to reach the goal quickly while
 ### Key Challenges
 
 ::: {data-fragment-index="1"}
-- Time-Optimality:
+- Time-Optimality: Suboptimal solutions (<span style="font-size:0.6em; color:gray;">(Sharon et al., 2015)</span>)
 :::
 
 ::: {.fragment  data-fragment-index="2"}
-- Interaction-Awareness:
+- Interaction-Awareness: Deviate from planned trajectories, conservative assumptions (<span style="font-size:0.6em; color:gray;">(Sharon et al., 2015)</span>)
 :::
 
 ::: {.fragment data-fragment-index="3"}
-- Scalability, Efficiency: 
+- Scalability, Efficiency: Computationally expensive, limited scalability (<span style="font-size:0.6em; color:gray;">(Sharon et al., 2015)</span>)
 :::
 
 
 
-# Thesis Contributions 
+# Dissertation Contributions 
 
 <div class="three-columns">
 
@@ -66,34 +66,66 @@ Autonomy of a team of robots requires being able to reach the goal quickly while
 Time-Optimal Motion Planning
 <img src="media/image/phd-defense/partI.png" width="50%">
 
-<!-- <div style="font-size:0.75em;">
-  (ICRA 2024, Preprint)
-</div> -->
 </div>
 
 <div>
 Interaction Awareness for Motion Planning
 <img src="media/image/phd-defense/partII.png" width="50%">
-<!-- <div style="font-size:0.75em;">
-  (T-RO 2025, MRS 2023)
-</div> -->
+
 </div>
 
 <div>
 Safe, Fast Motion Planning
 <img src="media/image/phd-defense/partIII.png" width="50%">
 
-<!-- <div style="font-size:0.75em;">
-  (ICAPS 2026)
-</div> -->
 </div>
 
 </div>
+
+. . . 
+
+::: {.box-green}
+:::: {.box-green-title}
+Research Vision
+::::
+Design a unified, *theoretically grounded* motion planning framework for *heterogeneous* robots that respects each robot’s *kinodynamic* constraints.
+:::
+
+<!-- # Presentation Overview
+
+<ul class="overview">
+  <li>Introduction, Background</li>
+  <li> Kinodynamic Motion Planning for Multi-Robot Systems</li>
+</ul>
+
+<div class="three-columns">
+
+<div>
+<b>Part I</b><br>
+Time-Optimal Motion Planning
+<img src="media/image/phd-defense/partI.png" width="50%">
+</div>
+
+<div>
+<b>Part II</b><br>
+Interaction Awareness for Motion Planning
+<img src="media/image/phd-defense/partII.png" width="50%">
+</div>
+
+<div>
+<b>Part III</b><br>
+Safe, Fast Motion Planning
+<img src="media/image/phd-defense/partIII.png" width="50%">
+</div>
+
+</div>
+
+- Conclusion and Future Work -->
 
 # Presentation Overview
 
 <ul class="overview">
-  <li>Introduction: Multi-Robot Coordination</li>
+  <li class="active">Introduction, Background</li>
   <li>Kinodynamic Motion Planning for Multi-Robot Systems</li>
 </ul>
 
@@ -121,50 +153,89 @@ Safe, Fast Motion Planning
 
 - Conclusion and Future Work
 
-# Presentation Overview
 
-<ul class="overview">
-  <li class="active">Introduction: Multi-Robot Coordination</li>
-  <li>Kinodynamic Motion Planning for Multi-Robot Systems</li>
-</ul>
-
-<div class="three-columns">
-
-<div>
-<b>Part I</b><br>
-Time-Optimal Motion Planning
-<img src="media/image/phd-defense/partI.png" width="50%">
-</div>
-
-<div>
-<b>Part II</b><br>
-Interaction Awareness for Motion Planning
-<img src="media/image/phd-defense/partII.png" width="50%">
-</div>
-
-<div>
-<b>Part III</b><br>
-Safe, Fast Motion Planning
-<img src="media/image/phd-defense/partIII.png" width="50%">
-</div>
-
-</div>
-
-- Conclusion and Future Work
-
-
-
-# Multi-Robot Motion Planning {#intro}
-
+# Background: Multi-Robot Kinodynamic Motion Planning {#intro}
 
 <video width="70%" autoplay muted loop playsinline>
   <source src="media/video/phd-defense/mrmp-problem.mp4" type="video/mp4">
 </video>
 
-**Goal**: Move each robot from its start state ($\mathbf{s}_1$, $\mathbf{s}_2$) to its goal state ($\mathbf{g}_1$, $\mathbf{g}_2$) while avoiding obstacles and collisions with other robots.
+Move each robot from its start state ($\mathbf{s}_1$, $\mathbf{s}_2$) to its goal state ($\mathbf{g}_1$, $\mathbf{g}_2$) while avoiding obstacles and collisions with other robots, and respecting *robot dynamics*.
+
+# Background: Robot Dynamics
+
+# Presentation Overview
+
+<ul class="overview">
+  <li>Introduction, Background</li>
+  <li class="active">Kinodynamic Motion Planning for Multi-Robot Systems</li>
+</ul>
+
+<div class="three-columns">
+
+<div>
+<b>Part I</b><br>
+Time-Optimal Motion Planning
+<img src="media/image/phd-defense/partI.png" width="50%">
+</div>
+
+<div>
+<b>Part II</b><br>
+Interaction Awareness for Motion Planning
+<img src="media/image/phd-defense/partII.png" width="50%">
+</div>
+
+<div>
+<b>Part III</b><br>
+Safe, Fast Motion Planning
+<img src="media/image/phd-defense/partIII.png" width="50%">
+</div>
+
+</div>
+
+- Conclusion and Future Work
+
+# Presentation Overview {#preview}
+
+<ul class="overview">
+  <li>Introduction, Background</li>
+  <li>Kinodynamic Motion Planning for Multi-Robot Systems </li>
+</ul>
+
+<div class="three-columns">
+
+<div>
+<b><span style="color:#0072B2;">Part I</span></b><br>
+<span style="color:#0072B2;">Time-Optimal Motion Planning</span>
+<img src="media/image/phd-defense/partI.png" width="50%">
+
+<div style="font-size:0.75em;">
+  <strong>(Ch. 4 – ICRA 2024)</strong><br>
+  (Ch. 5 – Preprint)
+</div>
+</div>
+
+<div>
+<b>Part II</b><br>
+Interaction Awareness for Motion Planning
+<img src="media/image/phd-defense/partII.png" width="50%">
+</div>
+
+<div>
+<b>Part III</b><br>
+Safe, Fast Motion Planning
+<img src="media/image/phd-defense/partIII.png" width="50%">
+</div>
+
+</div>
+
+- Conclusion and Future Work
 
 
-# Multi-Robot Coordination: Related Work {#intro}
+# Part I. Time-Optimal Kinodynamic Motion Planning for Multi-Robot Systems {#preview}
+
+
+# Related Work {#intro}
 
 ::: {.container}
 
@@ -219,67 +290,46 @@ Sharon et al., 2015; Sharon et al., 2015; Sharon et al., 2015;
 
 :::
 
+. . . 
 
-# Research Statement
+Research Gap: 
+
+- Respects robot dynamics
+- Supports arbitrary robot dynamics
+- Produces time-optimal solutions
+
+
+# db-CBS: discontinuity-bounded Conflict-based Search for Multi-Robot Kinodynamic Motion Planning {#preview}
+
+. . . 
 
 ::: {.box-green}
-:::: {.box-green-title}
-
-::::
-Design a unified, *theoretically grounded* motion planning framework for *heterogeneous* robots that respects each robot’s *kinodynamic* constraints.
+- Probabilistically complete and asymptotically optimal
+- Finds near-optimal solutions quickly
+- Supports arbitrary robot dynamics
 :::
 
-# Presentation Overview {#preview}
 
-<ul class="overview">
-  <li>Introduction: Multi-Robot Coordination</li>
-  <li>Kinodynamic Motion Planning for Multi-Robot Systems </li>
-</ul>
+```{=html}
+<video data-autoplay loop muted playsinline src="media/video/phd-defense/dbcbs-intro.mp4" width="90%"></video>
+```
 
-<div class="three-columns">
-
-<div>
-<b><span style="color:#0072B2;">Part I</span></b><br>
-<span style="color:#0072B2;">Time-Optimal Motion Planning</span>
-<img src="media/image/phd-defense/partI.png" width="50%">
-
-<div style="font-size:0.75em;">
-  <strong>(Ch. 4 – ICRA 2024)</strong><br>
-  (Ch. 5 – Preprint)
-</div>
-</div>
-
-<div>
-<b>Part II</b><br>
-Interaction Awareness for Motion Planning
-<img src="media/image/phd-defense/partII.png" width="50%">
-</div>
-
-<div>
-<b>Part III</b><br>
-Safe, Fast Motion Planning
-<img src="media/image/phd-defense/partIII.png" width="50%">
-</div>
-
-</div>
-
-- Conclusion and Future Work
-
-
-# Part I. Time-Optimal Kinodynamic Motion Planning for Multi-Robot Systems {#preview}
-
-
-# Part I. Time-Optimal Kinodynamic Motion Planning for Multi-Robot Systems {#preview}
-
-![](media/image/phd-defense/flowchart-dbcbs-1.png)
 <div style="position:absolute; bottom:20px; left:40px; right:40px; font-size:0.75em; color:gray;">
 Moldagalieva, A., Ortiz-Haro, J., Toussaint, M., Hönig, W. (2024)<i>db-CBS: Discontinuity-Bounded Conflict-Based Search for Multi-Robot Kinodynamic Motion Planning</i>, IEEE  International Conference on Robotics and Automation (ICRA).
 </div>
 
-# db-CBS: Time-Optimal Kinodynamic Motion Planning for Multi-Robot Systems {#preview}
+
+# db-CBS: Main Idea {#preview}
+
+
+# db-CBS: How it works? {#preview}
 
 ::: {.r-stack}
 
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dbcbs-1.png)
+
+::::
 :::{.element: class="fragment current-visible"}
 ![](media/image/phd-defense/flowchart-dbcbs-2.png)
 
@@ -295,8 +345,9 @@ Moldagalieva, A., Ortiz-Haro, J., Toussaint, M., Hönig, W. (2024)<i>db-CBS: Dis
 ::::
 :::
 
-# db-CBS: Results {#preview}
+# db-CBS: Theoretical Properties {#preview}
 
+# db-CBS: Performance Evaluatiosns {#preview} 
 
 # db-CBS: Limitations{#preview}
 
@@ -304,7 +355,7 @@ Moldagalieva, A., Ortiz-Haro, J., Toussaint, M., Hönig, W. (2024)<i>db-CBS: Dis
 # Presentation Overview {#preview}
 
 <ul class="overview">
-  <li>Introduction: Multi-Robot Coordination</li>
+  <li>Introduction, Background</li>
   <li>Kinodynamic Motion Planning for Multi-Robot Systems </li>
 </ul>
 
@@ -395,7 +446,7 @@ Moldagalieva, A., Ortiz-Haro, J., Hönig, W. (2025) <i>db-ECBS: Interaction-Awar
 # Presentation Overview {#preview}
 
 <ul class="overview">
-  <li>Introduction: Multi-Robot Coordination</li>
+  <li>Introduction, Background</li>
   <li>Kinodynamic Motion Planning for Multi-Robot Systems </li>
 </ul>
 
