@@ -345,7 +345,7 @@ Asymptotic optimality implies *probabilistic completeness*.
 
 
 
-# db-CBS: Summary and Limitations {#preview}
+# db-CBS: Summary {#preview}
 
 . . . 
 
@@ -416,9 +416,51 @@ Robots can deviate from planned trajectories, leading to crash.
 
 # Related Work
 
+::: {.container}
+
+:::: {.col}
+::: {.box-def-two}
+:::: {.box-blue-title}
+Conservative Planner
+::::
+- assumes ellipsoid shape around robots
+- scales well ($\le$ 32 robots)
+- <span style="color:red">fails in tight environments</span>
+
+<img src="media/image/phd-defense/conservative.png" width="55%">
+
+<div style="font-size:0.45em; color:gray; margin-top:0.1em;">
+Sharon et al., 2015; Sharon et al., 2015; Sharon et al., 2015; 
+</div>
+:::
+::::
+
+:::: {.col}
+::: {.box-def-two}
+:::: {.box-blue-title}
+Learning-based Planner
+::::
+- Learn residual dynamics
+- Works with heterogeneous robots
+- <span style="color:red">assumes simplified 2D dynamics</span>
+- <span style="color:red">Poor scalability ($\le$ 3 robots)</span>
+
+<img src="media/image/phd-defense/NeuralSwarm2.png" width="100%">
+
+<div style="font-size:0.45em; color:gray; margin-top:0.5em;">
+Sharon et al., 2015; Sharon et al., 2015; Sharon et al., 2015; 
+</div>
+:::
+::::
+
+:::
+
 . . . 
 
-Research Gap
+Research Gap: 
+
+- Navigate in tight environemnts (3D)
+- Improve the scalability of db-CBS (2D)
 
 
 # db-ECBS: Interaction-Aware Multi-Robot Kinodynamic Motion Planning {#preview}
@@ -476,7 +518,7 @@ As in db-CBS, adding more motion primitives and reducing the discontinuity bound
 # db-ECBS: Performance Evaluation {#preview}
 
 
-# db-ECBS: Summary and Limitations {#preview}
+# db-ECBS: Summary {#preview}
 
 
 # Presentation Overview {#preview}
@@ -521,8 +563,14 @@ Interaction Awareness for Motion Planning
 
 # Computational Effort in Kinodynamic Motion Planning {#preview}
 
-![](media/image/phd-defense/complexity-scalability.png)
+<img src="media/image/phd-defense/complexity-scalability.png"
+     style="width: 75%; height: auto;">
 
+. . . 
+
+::::: {.box-red}
+With the increasing number of robots, the computational burden increases.
+:::::
 
 # db-lacam: Fast and scalable multi-robot kinodynamic motion planning with discontinuity-bounded search and lightweight MAPF {#preview}
 
@@ -584,7 +632,7 @@ Exhaustive search eventually finds a solution, while stochastic motion sampling 
 # db-LaCAM: Performance Evaluation {#preview}
 
 
-# db-LaCAM: Summary and Limitations {#preview}
+# db-LaCAM: Summary {#preview}
 
 # Conclusion: Summary of Contributions {#preview}
 
@@ -702,9 +750,9 @@ Safe, Fast Motion Planning
 
 - Scalable Interaction-Aware Motion Planning - <span style="color: red;">
   Difficult to maintain scalability while reasoning about dynamic coupling
-  </span>. 
-
-  . . .
+  </span>
+  
+. . .
 
 - Task and Motion Planning Integration - *system-level intelligence*
 
