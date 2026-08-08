@@ -239,3 +239,34 @@
   margin: 20px auto;
   box-sizing: border-box;
 }
+
+.parts-result-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  width: 100%;
+  margin-top: 1.5em;
+}
+
+.result-box {
+  height: 14em;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 2px solid #A8D5BA;
+  border-radius: 6px;
+}
+
+.result-red-box {
+  height: 8em;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 2px solid #a12525;
+  border-radius: 6px;
+}
+

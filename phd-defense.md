@@ -509,7 +509,6 @@ Interaction Awareness for Motion Planning
 
 <div style="font-size:0.75em;">
   <strong>(Ch. 7 – ICAPS 2026)</strong><br>
-
 </div>
 
 </div>
@@ -587,10 +586,183 @@ Exhaustive search eventually finds a solution, while stochastic motion sampling 
 
 # db-LaCAM: Summary and Limitations {#preview}
 
-# Conclusion 
+# Conclusion: Summary of Contributions {#preview}
 
-# Future Work
+<ul class="overview">
+  <li>Kinodynamic Motion Planning for Multi-Robot Systems </li>
+</ul>
 
-# Thanks 
+<div class="three-columns">
 
-# References
+<div class="part-column">
+<b>Part I</b><br>
+Time-Optimal Motion Planning
+</div>
+
+
+<div class="part-column">
+<b>Part II</b><br>
+Interaction Awareness for Motion Planning
+</div>
+
+
+<div class="part-column">
+<b>Part III</b><br>
+Safe, Fast Motion Planning
+</div>
+
+</div>
+
+. . . 
+
+<div class="parts-result-boxes">
+
+  <div class="result-box">
+  - motion-primitive-based kinodynamic planning framework
+  - scalability across heterogeneous robot dynamics
+  <br>
+  <span style="color: #0072B2; position: relative; top: 70px; left: 5px;">
+    (Ch. 4 - ICRA 2024)<br>
+    (Ch. 5 - Preprint)
+  </span>
+  </div>
+
+  <div class="result-box">
+  - directly reasons about aerodynamic force between flying robots
+  - better scalability (<=16 robots)
+  <br>
+  <span style="color: #0072B2; position: relative; top: 100px; left: 5px;">
+    (Ch. 6 - T-RO 2025)<br>
+    (Ch. 7 - MRS 2023)
+  </span>
+  </div>
+
+  <div class="result-box">
+  - computational runtime improvement up to 10x
+  - scalability up to 50 robots
+  <br>
+  <span style="color: #0072B2; position: relative; top: 160px; left: 5px;">
+    (Ch. 8 - ICAPS 2026)
+  </span>
+  </div>
+
+</div>
+
+# Conclusion: Limitations {#preview}
+
+<ul class="overview">
+  <li>Kinodynamic Motion Planning for Multi-Robot Systems </li>
+</ul>
+
+<div class="three-columns">
+
+<div class="part-column">
+<b>Part I</b><br>
+Time-Optimal Motion Planning
+</div>
+
+
+<div class="part-column">
+<b>Part II</b><br>
+Interaction Awareness for Motion Planning
+</div>
+
+
+<div class="part-column">
+<b>Part III</b><br>
+Safe, Fast Motion Planning
+</div>
+
+</div>
+
+. . . 
+
+<div class="parts-result-boxes">
+
+  <div class="result-red-box">
+  - poor scalability
+  - computationally expensive
+  </div>
+
+  <div class="result-red-box">
+  - suboptimal solutions
+  - computationally expensive
+  </div>
+
+  <div class="result-red-box">
+  - no optimality guarantees
+  - rely on accurate heuristics
+  </div>
+
+</div>
+
+# Open Challenges and Future Work {#preview}
+
+. . . 
+
+- Scalable Interaction-Aware Motion Planning - <span style="color: red;">
+  Difficult to maintain scalability while reasoning about dynamic coupling
+  </span>. 
+
+  . . .
+
+- Task and Motion Planning Integration - *system-level intelligence*
+
+. . . 
+
+- Learning-Integrated Motion Planning - represent dynamics, particularly in settings
+where system behavior changes under external disturbances such as wind, friction, or contact.
+
+. . . 
+
+- Human-in-the-Loop and Safety
+
+. . . 
+
+- Real-Time Performance and Guarantees
+
+. . . 
+
+- Benchmarking and Standardization
+
+<!-- ::: {.container}
+
+:::: {.col}
+::: {.box-def}
+:::: {.box-blue-title}
+Offline Motion Planning
+::::
+- Task and Motion Planning Integration
+- Learning-Integrated Motion Planning
+
+:::
+::::
+
+:::: {.col}
+::: {.box-def}
+:::: {.box-blue-title}
+Online Motion Planning
+::::
+- Human-in-the-Loop and Safety
+- Real-Time Performance and Guarantees
+
+:::
+::::
+
+:::: {.col}
+::: {.box-def}
+:::: {.box-blue-title}
+Methodological Directions
+::::
+- Benchmarking and Standardization
+
+:::
+::::
+
+::: -->
+
+# Thanks to
+
+all my collaborators and co-authors!
+
+# References I
