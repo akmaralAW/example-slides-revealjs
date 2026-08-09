@@ -42,18 +42,18 @@ Autonomy of a team of robots requires being able to reach the goal quickly while
 :::
 
 
-### Key Challenges
+### Key Challenges in Multi-Robot Coordination
 
 ::: {data-fragment-index="1"}
-- Time-Optimality: Suboptimal solutions (<span style="font-size:0.6em; color:gray;">(Sharon et al., 2015)</span>)
+- Time-Optimality: How fast can robots reach their goals?
 :::
 
 ::: {.fragment  data-fragment-index="2"}
-- Interaction-Awareness: Deviate from planned trajectories, conservative assumptions (<span style="font-size:0.6em; color:gray;">(Sharon et al., 2015)</span>)
+- Interaction-Awareness: How should robots coordinate in close proximity?
 :::
 
 ::: {.fragment data-fragment-index="3"}
-- Scalability, Efficiency: Computationally expensive, limited scalability (<span style="font-size:0.6em; color:gray;">(Sharon et al., 2015)</span>)
+- Scalability & Efficiency: Can motion planning be fast and scalable?
 :::
 
 
@@ -141,7 +141,7 @@ Dynamics - function that describes the change of the configuration space, given 
 
 ::: {.box-green}
 :::: {.box-green-title}
-Car with trailer Dynamics
+Car-with-trailer Dynamics
 ::::
 States $\mathbf{x} = (x, y, \theta_1, \theta_2)$, where $x,y$ is the position, and $\theta_1$, $\theta_2$ are the orientations for the car and trailer. Actions $\mathbf{u} = (v, \phi)$, where $v$ is linear velocity, $\phi$ the steerig angle. 
 $L$ is the car wheelbase, $L_h$ is the hitch length.
@@ -152,6 +152,20 @@ $\dot{x} = v \cos \theta_1, \quad \dot{y} = v \sin \theta_1, \quad \dot{\theta_1
 :::
 
 ![](media/image/icaps/car_with_trailer.png){width=400}
+
+
+# Background: discontinuity-bounded Search with Motion Primitives {#preview}
+
+Motion primitive - short trajectories, which follows robot dynamics $\mathbf{x}_{k+1} = \mathbf{f}(\mathbf{x}_k,\mathbf{u}_k)$
+
+![](media/image/nu/motion-primitive.png){width=500}
+
+. . . 
+
+discontinuity-bounded Search - allows for an user-defined discontinuity ($\delta$) between states
+
+![](media/image/phd-defense/db-search.png){width=500}
+
 
 # Presentation Overview
 
@@ -238,8 +252,8 @@ MAPF
 - <span style="color:red">Ignores robot dynamics</span>
 <img src="media/image/phd-defense/mapf.png" width="100%">
 
-<div style="font-size:0.45em; color:gray; margin-top:0.1em;">
-Sharon et al., 2015; Sharon et al., 2015; Sharon et al., 2015; 
+<div style="font-size:0.6em; color:gray; margin-top:-1.1em;">
+Sharon et al., 2015; SJ. Li, Chen, et al., 2021; Okumura, 2023b; 
 </div>
 
 :::
@@ -255,8 +269,8 @@ MAPF + Post-processing
 - <span style="color:red">Suboptimal trajectories</span>
 <img src="media/image/phd-defense/mapf-post.png" width="100%">
 
-<div style="font-size:0.45em; color:gray; margin-top:0.1em;">
-Sharon et al., 2015; Sharon et al., 2015; Sharon et al., 2015; 
+<div style="font-size:0.6em; color:gray; margin-top:-1.1em;">
+Hönig et al., 2018; Luis et al., 2020;
 </div>
 :::
 ::::
@@ -271,8 +285,8 @@ Bezier/Spline-based
 - <span style="color:red">Limited dynamics</span> 
 <img src="media/image/phd-defense/bezier-based-method.png" width="100%">
 
-<div style="font-size:0.45em; color:gray; margin-top:0.1em;">
-Sharon et al., 2015; Sharon et al., 2015; Sharon et al., 2015; 
+<div style="font-size:0.6em; color:gray; margin-top:-1.1em;">
+Senbaslar et al., 2023; Yan & Li, 2024;
 </div>
 :::
 ::::
@@ -307,8 +321,6 @@ Research Gap:
 Moldagalieva, A., Ortiz-Haro, J., Toussaint, M., Hönig, W. (2024)<i>db-CBS: Discontinuity-Bounded Conflict-Based Search for Multi-Robot Kinodynamic Motion Planning</i>, IEEE  International Conference on Robotics and Automation (ICRA).
 </div>
 
-
-<!-- # db-CBS: Main Idea {#preview} -->
 
 # db-CBS: How it works? {#preview}
 
@@ -564,7 +576,7 @@ Interaction Awareness for Motion Planning
 # Computational Effort in Kinodynamic Motion Planning {#preview}
 
 <img src="media/image/phd-defense/complexity-scalability.png"
-     style="width: 75%; height: auto;">
+     style="width: 70%; height: auto;">
 
 . . . 
 
@@ -634,6 +646,19 @@ Exhaustive search eventually finds a solution, while stochastic motion sampling 
 
 # db-LaCAM: Summary {#preview}
 
+
+# Conclusion: Impact of Research Results
+
+::: {.box-green}
+:::: {.box-green-title}
+Physically realistic planning &rarr; Real-world deployment
+::::
+- Plan motions that respect what robots can actually execute
+- Move beyond simplified models to heterogeneous robot dynamics
+- Bring multi-robot planning closer to real-world autonomous operation
+:::
+
+
 # Conclusion: Summary of Contributions {#preview}
 
 <ul class="overview">
@@ -663,30 +688,31 @@ Safe, Fast Motion Planning
 
 . . . 
 
+
 <div class="parts-result-boxes">
 
   <div class="result-box">
-  - motion-primitive-based kinodynamic planning framework
+  - high-quality solutions
   - scalability across heterogeneous robot dynamics
   <br>
-  <span style="color: #0072B2; position: relative; top: 70px; left: 5px;">
+  <span style="color: #0072B2; position: relative; top: 130px; left: 5px;">
     (Ch. 4 - ICRA 2024)<br>
     (Ch. 5 - Preprint)
   </span>
   </div>
 
   <div class="result-box">
-  - directly reasons about aerodynamic force between flying robots
-  - better scalability (<=16 robots)
+  - safe trajectories in dense formations
+  - scalability up to 16 robots
   <br>
-  <span style="color: #0072B2; position: relative; top: 100px; left: 5px;">
+  <span style="color: #0072B2; position: relative; top: 160px; left: 5px;">
     (Ch. 6 - T-RO 2025)<br>
     (Ch. 7 - MRS 2023)
   </span>
   </div>
 
   <div class="result-box">
-  - computational runtime improvement up to 10x
+  - computational runtime improvement up to $10\times$
   - scalability up to 50 robots
   <br>
   <span style="color: #0072B2; position: relative; top: 160px; left: 5px;">
@@ -695,6 +721,8 @@ Safe, Fast Motion Planning
   </div>
 
 </div>
+
+
 
 # Conclusion: Limitations {#preview}
 
@@ -728,86 +756,42 @@ Safe, Fast Motion Planning
 <div class="parts-result-boxes">
 
   <div class="result-red-box">
-  - poor scalability
-  - computationally expensive
+  In obstacle-dense environments, the planner can spend significant time resolving conflicts.
   </div>
 
   <div class="result-red-box">
-  - suboptimal solutions
-  - computationally expensive
+  The joint-state space trajectory optimization scales poorly with large robot teams.
   </div>
 
   <div class="result-red-box">
-  - no optimality guarantees
-  - rely on accurate heuristics
+  With non-accurate heuristic estimation, the planner can be inefficient.
   </div>
 
 </div>
 
+
+
 # Open Challenges and Future Work {#preview}
 
-. . . 
-
-- Scalable Interaction-Aware Motion Planning - <span style="color: red;">
-  Difficult to maintain scalability while reasoning about dynamic coupling
-  </span>
-  
 . . .
 
-- Task and Motion Planning Integration - *system-level intelligence*
+- Motion planning for unmodeled dynamics - <span style="color: red;">
+  Difficult to model dynamics, that are under external disturbances
+  </span>
+
+. . .
+
+- Task and Motion Planning Integration/*System-level Intelligence* - Internal decision-making mechanisms that allocate tasks based on individual capabilities and global objectives.
 
 . . . 
 
-- Learning-Integrated Motion Planning - represent dynamics, particularly in settings
-where system behavior changes under external disturbances such as wind, friction, or contact.
+- Real-Time Performance and Guarantees - Balancing formal guarantees with real-time computational performance.
 
 . . . 
 
-- Human-in-the-Loop and Safety
+- Benchmarking and Standardization - Reproducibility and fair comparison between different methods.
 
-. . . 
 
-- Real-Time Performance and Guarantees
-
-. . . 
-
-- Benchmarking and Standardization
-
-<!-- ::: {.container}
-
-:::: {.col}
-::: {.box-def}
-:::: {.box-blue-title}
-Offline Motion Planning
-::::
-- Task and Motion Planning Integration
-- Learning-Integrated Motion Planning
-
-:::
-::::
-
-:::: {.col}
-::: {.box-def}
-:::: {.box-blue-title}
-Online Motion Planning
-::::
-- Human-in-the-Loop and Safety
-- Real-Time Performance and Guarantees
-
-:::
-::::
-
-:::: {.col}
-::: {.box-def}
-:::: {.box-blue-title}
-Methodological Directions
-::::
-- Benchmarking and Standardization
-
-:::
-::::
-
-::: -->
 
 # Thanks to
 
