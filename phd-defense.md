@@ -297,9 +297,16 @@ Senbaslar et al., 2023; Yan & Li, 2024;
 
 Research Gap: 
 
-- Respects robot dynamics
-- Supports arbitrary robot dynamics
-- Produces time-optimal solutions
+
+- Kinodynamic feasibility — Respect the dynamics of each robot
+
+. . . 
+
+- Model generality — Support arbitrary robot dynamics
+
+. . .
+
+- Time optimality — Produce time-optimal solutions
 
 
 # db-CBS: discontinuity-bounded Conflict-based Search for Multi-Robot Kinodynamic Motion Planning {#preview}
@@ -322,7 +329,7 @@ Moldagalieva, A., Ortiz-Haro, J., Toussaint, M., Hönig, W. (2024)<i>db-CBS: Dis
 </div>
 
 
-# db-CBS: How it works? {#preview}
+# db-CBS: How works? {#preview}
 
 ::: {.r-stack}
 
@@ -353,16 +360,36 @@ Asymptotic optimality implies *probabilistic completeness*.
 </div>
 
 
+
 # db-CBS: Performance Evaluation {#preview} 
 
+- Example: Random (eterogeneous)
+- Dynamics: unicycle ($1^{(st)}$ order), car-with-trailer, double integrator
+
+```{=html}
+<video data-autoplay loop muted playsinline src="media/video/nu/dbcbs-scalability.mp4" width="100%"></video>
+```
 
 
-# db-CBS: Summary {#preview}
+# db-CBS: Performance Evaluation {#preview} 
+
+- Example: Random (heterogeneous)
+- Dynamics: unicycle ($1^{(st)}, 2^{(nd)}$ order), car with trailer, double integrator
+
+```{=html}
+<video data-autoplay loop muted playsinline src="media/video/phd-defense/only-dbcbs.mp4" width="100%"></video>
+```
+. . . 
+
+
+*Take away*: db-CBS achieves $50\text{-}65\%$ lower cost than the second-best planner (K-CBS).
+
+# db-CBS is great, but ... {#preview}
 
 . . . 
 
-- Scales only up to 8 robots - computationally expensive
-- Ignore residual force between robots.
+- Scales only up to 8 robots
+- Ignores residual force between robots.
 
 . . . 
 
@@ -495,7 +522,7 @@ Moldagalieva, A., Ortiz-Haro, J., Hönig, W. (2025) <i>db-ECBS: Interaction-Awar
 </div>
 
 
-# db-ECBS: How It Works? {#preview}
+# db-ECBS: How Works? {#preview}
 
 ::: {.r-stack}
 
@@ -603,7 +630,7 @@ Moldagalieva, A., Okumura, K., Prorok, A., Hönig, W. (2026) <i> db-lacam: Fast 
 </div>
 
 
-# db-LaCAM: How It Works? {#preview}
+# db-LaCAM: How Works? {#preview}
 
 ::: {.r-stack}
 
