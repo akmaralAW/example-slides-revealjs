@@ -384,14 +384,12 @@ Asymptotic optimality implies *probabilistic completeness*.
 
 *Take away*: db-CBS achieves $50\text{-}65\%$ lower cost than the second-best planner (K-CBS).
 
-# db-CBS is great, but ... {#preview}
+# db-CBS is good, but ... {#preview}
 
 . . . 
 
-- Scales only up to 8 robots
+- Scales only up to 8 robots 
 - Ignores residual force between robots.
-
-. . . 
 
 ::: {.box-green}
 Part II addresses these limitations.
@@ -468,8 +466,8 @@ Conservative Planner
 
 <img src="media/image/phd-defense/conservative.png" width="55%">
 
-<div style="font-size:0.45em; color:gray; margin-top:0.1em;">
-Sharon et al., 2015; Sharon et al., 2015; Sharon et al., 2015; 
+<div style="font-size:0.6em; color:gray; margin-top:0.1em;">
+Hönig et al., 2018;
 </div>
 :::
 ::::
@@ -486,8 +484,8 @@ Learning-based Planner
 
 <img src="media/image/phd-defense/NeuralSwarm2.png" width="100%">
 
-<div style="font-size:0.45em; color:gray; margin-top:0.5em;">
-Sharon et al., 2015; Sharon et al., 2015; Sharon et al., 2015; 
+<div style="font-size:0.6em; color:gray; margin-top:0.1em;">
+Shi et al., 2022; J. Li et al., 2023 
 </div>
 :::
 ::::
@@ -498,8 +496,13 @@ Sharon et al., 2015; Sharon et al., 2015; Sharon et al., 2015;
 
 Research Gap: 
 
-- Navigate in tight environemnts (3D)
-- Improve the scalability of db-CBS (2D)
+. . .
+
+- Tight-space navigation — Navigate in close proximity without conservative geometric approximations
+
+. . . 
+
+- Scalability — Efficiently coordinate larger teams of robots.
 
 
 # db-ECBS: Interaction-Aware Multi-Robot Kinodynamic Motion Planning {#preview}
@@ -507,7 +510,7 @@ Research Gap:
 . . . 
 
 ::: {.box-green}
-- Probabilistically complete and asymptotically optimal
+- Probabilistically complete and asymptotically bounded suboptimal
 - Reasons about interaction force between robots
 - Scales up to 16 robots
 :::
@@ -556,9 +559,52 @@ As in db-CBS, adding more motion primitives and reducing the discontinuity bound
 
 # db-ECBS: Performance Evaluation {#preview}
 
+- Example: Swap-three (w/ aerodynamic interaction)
 
-# db-ECBS: Summary {#preview}
+<div style="display: flex; align-items: center; gap: 2%;">
 
+<div style="width: 75%;">
+
+<video data-autoplay controls style="width: 100%;">
+  <source src="media/video/nu/swap3-drone.mp4" type="video/mp4">
+</video>
+
+</div>
+
+<div style="width: 50%;">
+
+![](media/image/nu/swap3-drone.png)
+
+</div>
+
+</div>
+
+<span style="color:#e99a24;">Orange</span> - large size robot, <span style="color:blue;">blue</span> - small size robot.
+
+
+# db-ECBC: Performance Evaluation {#preview}
+
+- Example: Window (w/ aerodynamic interaction)
+- Platform: Crazyflie 2.1 robots
+
+```{=html}
+<video data-autoplay src="media/video/nu/dbecbs-uav.mp4" width="140%"></video>
+```
+. . . 
+
+*Take away*:  Ellipsoidal robot shapes cause more frequent collisions in this small environment, increasing conflict-resolution time.
+
+# db-ECBS is better, but ... 
+
+. . . 
+
+- Computationally expensive for fast motion planning
+
+. . . 
+
+::: {.box-green}
+Part III addresses this limitation.
+:::
 
 # Presentation Overview {#preview}
 
@@ -600,7 +646,7 @@ Interaction Awareness for Motion Planning
 
 # Part III. Fast, Scalable Multi-Robot Motion Planning {#preview}
 
-# Computational Effort in Kinodynamic Motion Planning {#preview}
+# Computational Effort in db-ECBS Motion Planner {#preview}
 
 <img src="media/image/phd-defense/complexity-scalability.png"
      style="width: 70%; height: auto;">
@@ -670,9 +716,39 @@ Exhaustive search eventually finds a solution, while stochastic motion sampling 
 
 # db-LaCAM: Performance Evaluation {#preview}
 
+::: {.r-stack}
 
-# db-LaCAM: Summary {#preview}
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/dblacam-results-1.png)
+::::
+:::{.element: class="fragment"}
+![](media/image/phd-defense/dblacam-results-2.png)
+::::
 
+:::
+
+. . . 
+
+*Take away*:db-LaCAM is up to $10\times$ faster than db-CBS and db-ECBS and scales better with team size. 
+
+# db-LaCAM: Performance Evaluation {#preview}
+
+Platforms: 10 Sanity drones, 4 Ploulu robots with atteched trailers.
+
+```{=html}
+<video data-autoplay loop muted playsinline src="media/video/nu/dblacam.mp4" width="100%"></video>
+```
+
+# db-LaCAM: Performance Evaluation {#preview}
+
+- Example: Random with 50 robots
+- Dynamics: unicycle ($1^{(st)}$ order)
+
+```{=html}
+<video data-autoplay loop muted playsinline src="media/video/phd-defense/n50_faster.mp4" width="60%"></video>
+```
+
+# Conclusion
 
 # Conclusion: Impact of Research Results
 
