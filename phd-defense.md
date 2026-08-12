@@ -41,7 +41,6 @@ Autonomy of a team of robots requires being able to reach the goal quickly while
 ::::
 :::
 
-
 ### Key Challenges in Multi-Robot Coordination
 
 ::: {data-fragment-index="1"}
@@ -363,7 +362,7 @@ Asymptotic optimality implies *probabilistic completeness*.
 
 # db-CBS: Performance Evaluation {#preview} 
 
-- Example: Random (eterogeneous)
+- Example: Random (heterogeneous)
 - Dynamics: unicycle ($1^{(st)}$ order), car-with-trailer, double integrator
 
 ```{=html}
@@ -377,7 +376,7 @@ Asymptotic optimality implies *probabilistic completeness*.
 - Dynamics: unicycle ($1^{(st)}, 2^{(nd)}$ order), car with trailer, double integrator
 
 ```{=html}
-<video data-autoplay loop muted playsinline src="media/video/phd-defense/only-dbcbs.mp4" width="100%"></video>
+<video data-autoplay loop muted playsinline src="media/video/phd-defense/only-dbcbs.mp4" width="90%"></video>
 ```
 . . . 
 
@@ -451,7 +450,7 @@ Safe, Fast Motion Planning
 Robots can deviate from planned trajectories, leading to crash.
 :::::
 
-# Related Work
+# Related Work {#preview}
 
 ::: {.container}
 
@@ -520,7 +519,7 @@ Research Gap:
 <video data-autoplay loop muted playsinline src="media/video/phd-defense/dbecbs-intro.mp4" width="80%"></video>
 ```
 
-<div style="position:absolute; bottom:-100px; left:40px; right:40px; font-size:0.75em; color:gray;">
+<div style="position:absolute; bottom:-60px; left:40px; right:40px; font-size:0.75em; color:gray;">
 Moldagalieva, A., Ortiz-Haro, J., Hönig, W. (2025) <i>db-ECBS: Interaction-Aware Multirobot Kinodynamic Motion Planning</i>, IEEE Transactions on Robotics (T-RO).
 </div>
 
@@ -588,22 +587,23 @@ As in db-CBS, adding more motion primitives and reducing the discontinuity bound
 - Platform: Crazyflie 2.1 robots
 
 ```{=html}
-<video data-autoplay src="media/video/nu/dbecbs-uav.mp4" width="140%"></video>
+<video data-autoplay src="media/video/nu/dbecbs-uav.mp4" width="90%"></video>
 ```
 . . . 
 
 *Take away*:  Ellipsoidal robot shapes cause more frequent collisions in this small environment, increasing conflict-resolution time.
 
-# db-ECBS is better, but ... 
+# db-ECBS: Limitations
 
 . . . 
 
 - Computationally expensive for fast motion planning
+- Optimization complexity, sometimes fails to converge
 
 . . . 
 
 ::: {.box-green}
-Part III addresses this limitation.
+Part III mitigates these limitations.
 :::
 
 # Presentation Overview {#preview}
@@ -668,10 +668,10 @@ With the increasing number of robots, the computational burden increases.
 
 
 ```{=html}
-<video data-autoplay loop muted playsinline src="media/video/icaps/icaps-gif.mp4" width="80%"></video>
+<video data-autoplay loop muted playsinline src="media/video/icaps/icaps-gif.mp4" width="70%"></video>
 ```
 
-<div style="position:absolute; bottom:-100px; left:40px; right:40px; font-size:0.75em; color:gray;">
+<div style="position:absolute; bottom:-100px; left:-20px; right:40px; font-size:0.75em; color:gray;">
 Moldagalieva, A., Okumura, K., Prorok, A., Hönig, W. (2026) <i> db-lacam: Fast and scalable multi-robot kinodynamic motion planning with discontinuity-bounded search and lightweight MAPF</i>, International Conference on Automated Planning and Scheduling (ICAPS).
 </div>
 
@@ -719,10 +719,12 @@ Exhaustive search eventually finds a solution, while stochastic motion sampling 
 ::: {.r-stack}
 
 :::{.element: class="fragment current-visible"}
-![](media/image/phd-defense/dblacam-results-1.png)
+<!-- ![](media/image/phd-defense/dblacam-results-1.png) -->
+<img src="media/image/phd-defense/dblacam-results-1.png" width="80%">
 ::::
 :::{.element: class="fragment"}
-![](media/image/phd-defense/dblacam-results-2.png)
+<!-- ![](media/image/phd-defense/dblacam-results-2.png) -->
+<img src="media/image/phd-defense/dblacam-results-2.png" width="80%">
 ::::
 
 :::
@@ -747,6 +749,14 @@ Platforms: 10 Sanity drones, 4 Ploulu robots with atteched trailers.
 ```{=html}
 <video data-autoplay loop muted playsinline src="media/video/phd-defense/n50_faster.mp4" width="60%"></video>
 ```
+# db-LaCAM: Limiations {#preview}
+
+Tight environments can cause livelocks
+
+```{=html}
+<video data-autoplay loop muted playsinline src="media/video/phd-defense/livelock-dblacam.mp4" width="100%"></video>
+```
+
 
 # Conclusion
 
