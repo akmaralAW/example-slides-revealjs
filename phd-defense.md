@@ -155,13 +155,13 @@ $\dot{x} = v \cos \theta_1, \quad \dot{y} = v \sin \theta_1, \quad \dot{\theta_1
 
 # Background: discontinuity-bounded Search with Motion Primitives {#preview}
 
-Motion primitive - short trajectories, which follows robot dynamics $\mathbf{x}_{k+1} = \mathbf{f}(\mathbf{x}_k,\mathbf{u}_k)$
+- Motion primitive - short trajectories, which follows robot dynamics $\mathbf{x}_{k+1} = \mathbf{f}(\mathbf{x}_k,\mathbf{u}_k)$
 
 ![](media/image/nu/motion-primitive.png){width=500}
 
 . . . 
 
-discontinuity-bounded Search - allows for an user-defined discontinuity ($\delta$) between states
+- discontinuity-bounded Search - allows for an user-defined discontinuity ($\delta$) between states
 
 ![](media/image/phd-defense/db-search.png){width=500}
 
@@ -324,11 +324,11 @@ Research Gap:
 ```
 
 <div style="position:absolute; bottom:20px; left:40px; right:40px; font-size:0.75em; color:gray;">
-Moldagalieva, A., Ortiz-Haro, J., Toussaint, M., Hönig, W. (2024)<i>db-CBS: Discontinuity-Bounded Conflict-Based Search for Multi-Robot Kinodynamic Motion Planning</i>, IEEE  International Conference on Robotics and Automation (ICRA).
+Moldagalieva, A., Ortiz-Haro, J., Toussaint, M., Hönig, W. (2024) <i>db-CBS: discontinuity-bounded Conflict-Based Search for Multi-Robot Kinodynamic Motion Planning</i>, IEEE  International Conference on Robotics and Automation (ICRA).
 </div>
 
 
-# db-CBS: How works? {#preview}
+# db-CBS: How It works? {#preview}
 
 ::: {.r-stack}
 
@@ -387,8 +387,10 @@ Asymptotic optimality implies *probabilistic completeness*.
 
 . . . 
 
-- Scales only up to 8 robots 
-- Ignores residual force between robots.
+- Poor scalability (up to 8 robots) 
+- Ignores residual force between robots
+
+. . . 
 
 ::: {.box-green}
 Part II addresses these limitations.
@@ -447,7 +449,7 @@ Safe, Fast Motion Planning
 . . . 
 
 ::::: {.box-red}
-Robots can deviate from planned trajectories, leading to crash.
+Robots can deviate from their planned trajectories, causing the lower robot to crash.
 :::::
 
 # Related Work {#preview}
@@ -459,9 +461,9 @@ Robots can deviate from planned trajectories, leading to crash.
 :::: {.box-blue-title}
 Conservative Planner
 ::::
-- assumes ellipsoid shape around robots
-- scales well ($\le$ 32 robots)
-- <span style="color:red">fails in tight environments</span>
+- Assumes ellipsoid shape around robots
+- Scales well ($\le$ 32 robots)
+- <span style="color:red">Fails in tight environments</span>
 
 <img src="media/image/phd-defense/conservative.png" width="55%">
 
@@ -476,9 +478,9 @@ Hönig et al., 2018;
 :::: {.box-blue-title}
 Learning-based Planner
 ::::
-- Learn residual dynamics
+- Learns residual dynamics
 - Works with heterogeneous robots
-- <span style="color:red">assumes simplified 2D dynamics</span>
+- <span style="color:red">Assumes simplified 2D dynamics</span>
 - <span style="color:red">Poor scalability ($\le$ 3 robots)</span>
 
 <img src="media/image/phd-defense/NeuralSwarm2.png" width="100%">
@@ -524,7 +526,7 @@ Moldagalieva, A., Ortiz-Haro, J., Hönig, W. (2025) <i>db-ECBS: Interaction-Awar
 </div>
 
 
-# db-ECBS: How Works? {#preview}
+# db-ECBS: How It Works? {#preview}
 
 ::: {.r-stack}
 
@@ -564,7 +566,7 @@ As in db-CBS, adding more motion primitives and reducing the discontinuity bound
 
 <div style="width: 75%;">
 
-<video data-autoplay controls style="width: 100%;">
+<video data-autoplay loop controls style="width: 100%;">
   <source src="media/video/nu/swap3-drone.mp4" type="video/mp4">
 </video>
 
@@ -579,6 +581,10 @@ As in db-CBS, adding more motion primitives and reducing the discontinuity bound
 </div>
 
 <span style="color:#e99a24;">Orange</span> - large size robot, <span style="color:blue;">blue</span> - small size robot.
+
+. . . 
+
+- letting the <span style="color:#e99a24;">large</span> robot under <span style="color:blue;">small</span> robots &rarr; lower solution cost
 
 
 # db-ECBC: Performance Evaluation {#preview}
@@ -676,7 +682,7 @@ Moldagalieva, A., Okumura, K., Prorok, A., Hönig, W. (2026) <i> db-lacam: Fast 
 </div>
 
 
-# db-LaCAM: How Works? {#preview}
+# db-LaCAM: How It Works? {#preview}
 
 ::: {.r-stack}
 

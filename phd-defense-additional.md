@@ -58,6 +58,11 @@ $K = \max_{i \in N} K^{(i)}$, $K^{(i)}$ - number of time steps in the discrete s
 
 # db-LaCAM and Livelock Instances {#preview}
 
+Before and After the Livelock Resolution Technique
+
+
+# db-LaCAM and Livelock Instances {#preview}
+
 Tight environments can cause livelocks
 
 ```{=html}
@@ -65,4 +70,42 @@ Tight environments can cause livelocks
 ```
 . . . 
 
-<span style="color: green;">Solution: better heuristics, that could predict livelong settings and avoid it (GNN-based, for instance)</span>
+<span style="color: green;">Solution: better heuristics, that could predict livelong settings and avoid it (GNN-based, f.e)</span>
+
+# db-ECBS Node Expansion {#preview}
+
+<img src="media/image/phd-defense/additional-material/db-expansion.png" width="100%">
+
+# db-ECBS with Omnidirectional Vision {#preview}
+
+- Outdoor deployment
+- No localization (except for starting state)
+- Offline motion planning &rarr; Execution stage
+
+. . . 
+
+![](media/image/phd-defense/additional-material/dbecbs-with-vision1.png)
+
+
+# db-ECBS with Omnidirectional Vision {#preview}
+
+
+::: {.r-stack}
+
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/additional-material/dbecbs-with-vision1.png)
+
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/additional-material/dbecbs-with-vision2.png)
+
+:::: 
+:::{.element: class="fragment"}
+![](media/image/phd-defense/additional-material/dbecbs-with-vision3.png)
+::::
+:::
+
+# db-(PIBT/LaCAM) with Omnidirectional Vision {#preview}
+
+
+# Rollout vs. Trajectory Optimization {#preview}
