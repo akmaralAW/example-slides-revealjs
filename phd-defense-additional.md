@@ -13,24 +13,21 @@ navigationMode: 'linear'
 controls: false
 ---
 
-# Hyperparameters for db-CBS motion planner {#preview}
+# Hyperparameters for db-ECBS motion planner {#preview}
 
 <img src="media/image/phd-defense/additional-material/varying-delta-analysis.png" width="60%">
 
 
-Large $\delta$ - more motion primitives for the search, higher computation time <br>
+Large $\delta$ - needs few motion primitives &rarr; lower computation time <br>
 
-Smaller $\delta$ - less applicable motion primitives, lower computation time.
+Smaller $\delta$ - requires more motion primitives &rarr; higher computation time.
 
-<!-- . . . 
 
-Complex dynamics - larger $\delta$, and more motion primitives is fast. If $\delta$ is small, then even more motion primitives don't help.
 
-Simpler dynamics - larger $\delta$ is better than smaller, and works better with less motion primitives than more motions. -->
+# discontinuity-bound value vs. Number of Motion Primitives {#preview}
 
-# Trajectory Optimization {#preview}
+<img src="media/image/phd-defense/additional-material/delta-vs-primitives.png" width="50%">
 
-<img src="media/image/phd-defense/additional-material/optimization-analysis.png" width="75%">
 
 # Trajectory Optimization Complexity {#preview}
 
@@ -41,6 +38,11 @@ Simpler dynamics - larger $\delta$ is better than smaller, and works better with
 $d^{(i)}_x, d^{(i)}_u$ - state and action dimensions of robot $i$, 
 $N$ - number of robots, 
 $K = \max_{i \in N} K^{(i)}$, $K^{(i)}$ - number of time steps in the discrete search solution of the $i^{\text{th}}$ robot.
+
+# Trajectory Optimization {#preview}
+
+<img src="media/image/phd-defense/additional-material/optimization-analysis.png" width="75%">
+
 
 # Trajectory Optimization Failure {#preview}
 
@@ -55,6 +57,21 @@ $K = \max_{i \in N} K^{(i)}$, $K^{(i)}$ - number of time steps in the discrete s
 <span style="color: green;">Solution: provide *better* set of motion primitives</span>
 
 <!-- With large $\delta$, discrete search might have some undetected collisions, and the optimization can fail to fix it. <br> -->
+
+# db-LaCAM: Livelock Handling
+
+Space-Cover and Goal-Oriented Clustering improved the solution quality
+
+```{=html}
+<video data-autoplay loop muted playsinline src="media/video/phd-defense/livelock-behaviour.mp4" width="80%"></video>
+```
+
+. . . 
+
+Assumptions: 
+
+- Accurate *h-value* estimation
+- Given finite search space and expressive motion primitives
 
 # db-LaCAM and Livelock Instances {#preview}
 
@@ -75,6 +92,28 @@ Tight environments can cause livelocks
 # db-ECBS Node Expansion {#preview}
 
 <img src="media/image/phd-defense/additional-material/db-expansion.png" width="100%">
+
+# db-CBS with Interaction Awareness
+
+. . . 
+
+
+- Change dynamics (as in db-ECBS)
+
+$\dot{\mathbf{x}}^{(i)} = \mathbf{f}^{(i)}(\mathbf{x}^{(i)}, \mathbf{u}^{(i)})$  &rarr;  $\dot{\mathbf{x}}^{(i)} = \mathbf{f}^{(i)}(\mathbf{x}^{(i)}, \mathbf{u}^{(i)}, \mathbf{\psi}^{(i)}(\mathbf{r}^{(i)}))$, <br>
+$\mathbf{\psi}^{(i)}(\cdot)$ - additional disturbance force.
+
+. . .
+
+- Create constraints from <span style="color: orange;">inter-robot interactions</span>, beyond collisions.
+
+# db-PIBT with Interaction Awareness
+
+. . . 
+
+- No need to alter the robot's state
+
+- While rolling out motions, check each state for <span style="color: orange;">inter-robot interactions</span>, beyond collisions.
 
 # db-ECBS with Omnidirectional Vision {#preview}
 
@@ -105,7 +144,85 @@ Tight environments can cause livelocks
 ::::
 :::
 
-# db-(PIBT/LaCAM) with Omnidirectional Vision {#preview}
+
+# Fixing the discontnuity {#preview}
+
+::: {.container}
+
+:::: {.col}
+::: {.box-def-two}
+:::: {.box-blue-title}
+w/ Optimization
+::::
+- <span style="color: orange;">Large environments</span> with long solutions
+:::
+::::
+
+:::: {.col}
+::: {.box-def-two}
+:::: {.box-blue-title}
+w/ Rollout
+::::
+- <span style="color: orange;">Struggles</span> with dynamics, like car-with-trailer 
+
+```{=html}
+<video data-autoplay loop muted playsinline src="media/video/phd-defense/dblacam-with-car.mp4" width="80%"></video>
+```
+
+:::
+::::
+
+:::
 
 
-# Rollout vs. Trajectory Optimization {#preview}
+
+# Termination Guarantee for db-CBS/ECBS
+
+- Compute an upper-bound of the cost (w/ complete, suboptimal polynomial alg.)
+
+<img src="media/image/phd-defense/additional-material/termination-guarantee.png" width="50%">
+
+
+- OPEN set keeps nodes with cost < upper bound cost, this makes sure that the OPEN set gets empty.
+
+
+# Benchmarking Problem Instances {#preview}
+
+<img src="media/image/phd-defense/additional-material/instances.png" width="100%">
+
+
+# Benchmarking Problem Instances {#preview}
+
+::: {.container}
+
+:::: {.col}
+::: {.box-def-two}
+:::: {.box-blue-title}
+Environment Properties
+::::
+- Dimensions — width × height × height (2D/3D)
+- Obstacle geometry — boxes, arbitrary meshes
+- Obstacle size — dimensions/radius
+- Obstacle placement — positions
+- Narrow passages — minimum corridor/window width
+:::
+::::
+
+:::: {.col}
+::: {.box-def-two}
+:::: {.box-blue-title}
+Robot Properties
+::::
+- Number of robots
+- Robot geometry — sphere, ellipsoid, box, etc.
+- Robot size — radius / dimensions
+- Robot state dimension
+- Robot control dimension
+- Robot state, action limits
+- Dynamics model — integrator, unicycle, car-with-trailer, etc.
+- Heterogeneity — whether robots have different dynamics, sizes
+- Initial and goal states
+:::
+::::
+
+:::

@@ -737,11 +737,11 @@ Exhaustive search eventually finds a solution, while stochastic motion sampling 
 
 . . . 
 
-*Take away*:db-LaCAM is up to $10\times$ faster than db-CBS and db-ECBS and scales better with team size. 
+*Take away*: db-LaCAM is up to $10\times$ faster than db-CBS and db-ECBS and scales better with team size. 
 
 # db-LaCAM: Performance Evaluation {#preview}
 
-Platforms: 10 Sanity drones, 4 Ploulu robots with atteched trailers.
+Platforms: 10 Sanity drones, 4 Ploulu robots with attached trailers.
 
 ```{=html}
 <video data-autoplay loop muted playsinline src="media/video/nu/dblacam.mp4" width="100%"></video>
@@ -755,7 +755,7 @@ Platforms: 10 Sanity drones, 4 Ploulu robots with atteched trailers.
 ```{=html}
 <video data-autoplay loop muted playsinline src="media/video/phd-defense/n50_faster.mp4" width="60%"></video>
 ```
-# db-LaCAM: Limiations {#preview}
+# db-LaCAM: Limitations {#preview}
 
 Tight environments can cause livelocks
 
