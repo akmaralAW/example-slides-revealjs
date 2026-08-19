@@ -29,6 +29,10 @@ Smaller $\delta$ - requires more motion primitives &rarr; higher computation tim
 <img src="media/image/phd-defense/additional-material/delta-vs-primitives.png" width="50%">
 
 
+# Trajectory Optimization {#preview}
+
+<img src="media/image/phd-defense/additional-material/optimization-analysis.png" width="75%">
+
 # Trajectory Optimization Complexity {#preview}
 
 \begin{equation}
@@ -39,9 +43,6 @@ $d^{(i)}_x, d^{(i)}_u$ - state and action dimensions of robot $i$,
 $N$ - number of robots, 
 $K = \max_{i \in N} K^{(i)}$, $K^{(i)}$ - number of time steps in the discrete search solution of the $i^{\text{th}}$ robot.
 
-# Trajectory Optimization {#preview}
-
-<img src="media/image/phd-defense/additional-material/optimization-analysis.png" width="75%">
 
 
 # Trajectory Optimization Failure {#preview}
@@ -56,16 +57,14 @@ $K = \max_{i \in N} K^{(i)}$, $K^{(i)}$ - number of time steps in the discrete s
 - Poor discrete solution &rarr; collision violations. <br>
 <span style="color: green;">Solution: provide *better* set of motion primitives</span>
 
-<!-- With large $\delta$, discrete search might have some undetected collisions, and the optimization can fail to fix it. <br> -->
 
-# db-LaCAM: Livelock Handling
+# db-LaCAM: Livelock Handling {#preview}
 
 Space-Cover and Goal-Oriented Clustering improved the solution quality
 
 ```{=html}
 <video data-autoplay loop muted playsinline src="media/video/phd-defense/livelock-behaviour.mp4" width="80%"></video>
 ```
-
 . . . 
 
 Assumptions: 
@@ -73,12 +72,9 @@ Assumptions:
 - Accurate *h-value* estimation
 - Given finite search space and expressive motion primitives
 
-# db-LaCAM and Livelock Instances {#preview}
+# db-LaCAM: Guarantees to resolve Livelocks {#preview}
 
-Before and After the Livelock Resolution Technique
-
-
-# db-LaCAM and Livelock Instances {#preview}
+# db-LaCAM: Livelock Handling {#preview}
 
 Tight environments can cause livelocks
 
@@ -87,11 +83,48 @@ Tight environments can cause livelocks
 ```
 . . . 
 
-<span style="color: green;">Solution: better heuristics, that could predict livelong settings and avoid it (GNN-based, f.e)</span>
+<span style="color: green;">Solution: better heuristics, that could predict livelong settings and avoid it (GNN-based, f.i)</span>
 
 # db-ECBS Node Expansion {#preview}
 
 <img src="media/image/phd-defense/additional-material/db-expansion.png" width="100%">
+
+
+
+# db-CBS vs. db-ECBS with $\omega=1$
+
+::: {.container}
+
+:::: {.col}
+::: {.box-def-two}
+:::: {.box-blue-title}
+db-CBS
+::::
+
+- f = g (cost-to-come) + h (<span style="color: green;">cost-to-go</span> )
+
+<img src="media/image/phd-defense/additional-material/dbcbs-discrete-1.png" width="100%">
+
+:::
+::::
+
+:::: {.col}
+::: {.box-def-two}
+:::: {.box-blue-title}
+db-ECBS
+::::
+
+- f = g (cost-to-come) + h (<span style="color: green;">inter-robot collision</span> )
+
+<img src="media/image/phd-defense/additional-material/dbecbs-discrete-1.png" width="100%">
+
+:::
+::::
+
+:::
+
+Even though FOCAL = OPEN
+
 
 # db-CBS with Interaction Awareness
 
@@ -105,7 +138,7 @@ $\mathbf{\psi}^{(i)}(\cdot)$ - additional disturbance force.
 
 . . .
 
-- Create constraints from <span style="color: orange;">inter-robot interactions</span>, beyond collisions.
+- Create constraints from <span style="color: orange;">inter-robot interactions</span>, beyond collisions during the discrete search
 
 # db-PIBT with Interaction Awareness
 
