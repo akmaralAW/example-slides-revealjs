@@ -603,7 +603,7 @@ As in db-CBS, adding more motion primitives and reducing the discontinuity bound
 
 . . . 
 
-- Computationally expensive for fast motion planning
+- Computationally expensive
 - Optimization complexity, sometimes fails to converge
 
 . . . 
@@ -757,11 +757,15 @@ Platforms: 10 Sanity drones, 4 Ploulu robots with attached trailers.
 ```
 # db-LaCAM: Limitations {#preview}
 
-Tight environments can cause livelocks
+ - Tight environments can cause livelocks
 
 ```{=html}
 <video data-autoplay loop muted playsinline src="media/video/phd-defense/livelock-dblacam.mp4" width="100%"></video>
 ```
+
+. . . 
+
+- Struggles with instances with narrow passes
 
 
 # Conclusion

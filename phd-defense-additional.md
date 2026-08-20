@@ -102,7 +102,7 @@ db-CBS
 ::::
 
 - f = g (cost-to-come) + h (<span style="color: green;">cost-to-go</span> )
-
+- Discrete search runtime is 5.9 s (average)
 <img src="media/image/phd-defense/additional-material/dbcbs-discrete-1.png" width="100%">
 
 :::
@@ -114,8 +114,8 @@ db-CBS
 db-ECBS
 ::::
 
-- f = g (cost-to-come) + h (<span style="color: green;">inter-robot collision</span> )
-
+- f = g (cost-to-come) + h (<span style="color: green;">collisions</span> )
+-  Discrete search runtime is 50.8 s (average)
 <img src="media/image/phd-defense/additional-material/dbecbs-discrete-1.png" width="100%">
 
 :::
@@ -123,7 +123,7 @@ db-ECBS
 
 :::
 
-Even though FOCAL = OPEN
+Even though FOCAL = OPEN for db-ECBS
 
 
 # db-CBS with Interaction Awareness
@@ -178,29 +178,45 @@ $\mathbf{\psi}^{(i)}(\cdot)$ - additional disturbance force.
 :::
 
 
-# Fixing the discontnuity {#preview}
+# Fixing the discontinuity {#preview}
 
 ::: {.container}
 
 :::: {.col}
-::: {.box-def-two}
-:::: {.box-blue-title}
-w/ Optimization
-::::
-- <span style="color: orange;">Large environments</span> with long solutions
-:::
-::::
-
-:::: {.col}
-::: {.box-def-two}
+::: {.box-def-two-wide}
 :::: {.box-blue-title}
 w/ Rollout
 ::::
-- <span style="color: orange;">Struggles</span> with dynamics, like car-with-trailer 
+- 3D environment + <span style="color: red">narrow pass</span>
+- Failure due to <span style="color: red">state-bound</span> violations
+- <span style="color: red">Expensive search</span> with car-with-trailer
 
-```{=html}
-<video data-autoplay loop muted playsinline src="media/video/phd-defense/dblacam-with-car.mp4" width="80%"></video>
-```
+::: {.r-stack}
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/additional-material/rollout-struggle-1.png)
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/additional-material/rollout-struggle-2.png)
+::::
+
+
+:::
+
+:::
+::::
+
+
+:::: {.col}
+::: {.box-def-two-wide}
+:::: {.box-blue-title}
+w/ Optimization
+::::
+- <span style="color: red">Narrow pass</span> - collision violations
+- <span style="color: red">Large environment</span>
+
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/complexity-scalability.png)
+::::
 
 :::
 ::::
@@ -209,11 +225,11 @@ w/ Rollout
 
 
 
-# Termination Guarantee for db-CBS/ECBS
+# Termination Guarantee for db-CBS/ECBS {#preview}
 
 - Compute an upper-bound of the cost (w/ complete, suboptimal polynomial alg.)
 
-<img src="media/image/phd-defense/additional-material/termination-guarantee.png" width="50%">
+<img src="media/image/phd-defense/additional-material/termination-guarantee.png" width="90%">
 
 
 - OPEN set keeps nodes with cost < upper bound cost, this makes sure that the OPEN set gets empty.
