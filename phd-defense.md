@@ -1,6 +1,5 @@
 ---
 title: Kinodynamic Motion Planning for Heterogeneous Multi-Robot Systems
-
 theme: white
 title-slide-attributes:
     data-background-image: media/phd-defense.svg
@@ -55,9 +54,50 @@ Autonomy of a team of robots requires being able to reach the goal quickly while
 - Scalability & Efficiency: Can motion planning be fast and scalable?
 :::
 
+# Dissertation Contributions {#preview}
 
+<div class="three-columns">
 
-# Dissertation Contributions 
+<div>
+Time-Optimal Motion Planning
+<img src="media/image/phd-defense/partI.png" width="50%">
+
+</div>
+
+<div>
+Interaction Awareness for Motion Planning
+<img src="media/image/phd-defense/partII.png" width="50%">
+
+</div>
+
+<div>
+Safe, Fast Motion Planning
+<img src="media/image/phd-defense/partIII.png" width="50%">
+
+</div>
+
+</div>
+
+. . . 
+
+<div class="three-columns">
+
+<div>
+Diffusion Model-based Motions
+<img src="media/image/phd-defense/partV.png" width="70%">
+
+</div>
+
+<div>
+Virtual Omnidirectional Perception
+<img src="media/image/phd-defense/partIV.png" width="70%">
+
+</div>
+
+</div>
+
+# Dissertation Contributions {#preview}
+
 
 <div class="three-columns">
 
@@ -91,7 +131,7 @@ Design a unified, *theoretically grounded* motion planning framework for *hetero
 :::
 
 
-# Presentation Overview
+# Presentation Overview 
 
 <ul class="overview">
   <li class="active">Introduction, Background</li>
@@ -142,9 +182,9 @@ Dynamics - function that describes the change of the configuration space, given 
 :::: {.box-green-title}
 Car-with-trailer Dynamics
 ::::
-States $\mathbf{x} = (x, y, \theta_1, \theta_2)$, where $x,y$ is the position, and $\theta_1$, $\theta_2$ are the orientations for the car and trailer. Actions $\mathbf{u} = (v, \phi)$, where $v$ is linear velocity, $\phi$ the steerig angle. 
-$L$ is the car wheelbase, $L_h$ is the hitch length.
-The dynamics $\mathbf{\dot{x} = \mathbf{f}(\mathbf{x}, \mathbf{u})}$ are:
+- States: $\mathbf{x} = (x, y, \theta_1, \theta_2)$
+- Actions: $\mathbf{u} = (v, \phi)$
+- Dynamics: $\mathbf{\dot{x} = \mathbf{f}(\mathbf{x}, \mathbf{u})}$, more precisely:
 
 $\dot{x} = v \cos \theta_1, \quad \dot{y} = v \sin \theta_1, \quad \dot{\theta_1} = \frac{v}{L}\tan \phi$,  $\quad \dot{\theta_2} = \frac{v}{L_h} \sin (\theta_1 - \theta_2)$
 
@@ -280,7 +320,7 @@ Hönig et al., 2018; Luis et al., 2020;
 Bezier/Spline-based 
 ::::
 - Scale well
-- <span style="color:red">Actuation limits ignored</span>
+- <span style="color:red">Suboptimal trajectories</span>
 - <span style="color:red">Limited dynamics</span> 
 <img src="media/image/phd-defense/bezier-based-method.png" width="100%">
 
@@ -328,7 +368,7 @@ Moldagalieva, A., Ortiz-Haro, J., Toussaint, M., Hönig, W. (2024) <i>db-CBS: di
 </div>
 
 
-# db-CBS: How It works? {#preview}
+# db-CBS: Approach {#preview}
 
 ::: {.r-stack}
 
@@ -419,7 +459,6 @@ Time-Optimal Motion Planning
 
 <div style="font-size:0.75em;">
   <strong>(Ch. 6 – T-RO 2025)</strong><br>
-  <!-- <strong>(Ch. 7 – MRS 2023)</strong><br> -->
   (Ch. 7 – MRS 2023)
 
 </div>
@@ -526,7 +565,7 @@ Moldagalieva, A., Ortiz-Haro, J., Hönig, W. (2025) <i>db-ECBS: Interaction-Awar
 </div>
 
 
-# db-ECBS: How It Works? {#preview}
+# db-ECBS: Approach {#preview}
 
 ::: {.r-stack}
 
@@ -551,10 +590,10 @@ Moldagalieva, A., Ortiz-Haro, J., Hönig, W. (2025) <i>db-ECBS: Interaction-Awar
 ::::
 :::
 
-# db-ECBS: Theoretical Properties {#preview}
+# db-ECBS: Extending ECBS {#preview}
 
 <div class="empty-box">
-As in db-CBS, adding more motion primitives and reducing the discontinuity bound progressively enriches the search space, yielding *asymptotic bounded suboptimality* and *probabilistic completeness*.
+- 
 </div>
 
 
@@ -655,15 +694,23 @@ Interaction Awareness for Motion Planning
 # Computational Effort in db-ECBS Motion Planner {#preview}
 
 <img src="media/image/phd-defense/complexity-scalability.png"
-     style="width: 70%; height: auto;">
+     style="width: 60%; height: auto;">
 
-. . . 
+\begin{equation}
+  \mathcal{O}\left(K\left(\sum_{i=1}^{N} \max\left(d_x^{(i)},d_u^{(i)}\right)\right)^3\right)
+\end{equation}
+
+$d^{(i)}_x, d^{(i)}_u$ - state and action dimensions of robot $i$, 
+$N$ - number of robots, 
+$K = \max_{i \in N} K^{(i)}$, $K^{(i)}$ - number of time steps in the discrete search solution of the $i^{\text{th}}$ robot.
+
+<!-- . . . 
 
 ::::: {.box-red}
 With the increasing number of robots, the computational burden increases.
-:::::
+::::: -->
 
-# db-lacam: Fast and scalable multi-robot kinodynamic motion planning with discontinuity-bounded search and lightweight MAPF {#preview}
+# db-LaCAM: Fast and scalable multi-robot kinodynamic motion planning with discontinuity-bounded search and lightweight MAPF {#preview}
 
 . . . 
 
@@ -678,11 +725,11 @@ With the increasing number of robots, the computational burden increases.
 ```
 
 <div style="position:absolute; bottom:-100px; left:-20px; right:40px; font-size:0.75em; color:gray;">
-Moldagalieva, A., Okumura, K., Prorok, A., Hönig, W. (2026) <i> db-lacam: Fast and scalable multi-robot kinodynamic motion planning with discontinuity-bounded search and lightweight MAPF</i>, International Conference on Automated Planning and Scheduling (ICAPS).
+Moldagalieva, A., Okumura, K., Prorok, A., Hönig, W. (2026) <i> db-LaCAM: Fast and scalable multi-robot kinodynamic motion planning with discontinuity-bounded search and lightweight MAPF</i>, International Conference on Automated Planning and Scheduling (ICAPS).
 </div>
 
 
-# db-LaCAM: How It Works? {#preview}
+# db-LaCAM: Approach {#preview}
 
 ::: {.r-stack}
 
@@ -711,6 +758,8 @@ Moldagalieva, A., Okumura, K., Prorok, A., Hönig, W. (2026) <i> db-lacam: Fast 
 ![](media/image/phd-defense/flowchart-dblacam-7.png)
 ::::
 :::
+
+# db-LaCAM: Why Efficient?
 
 
 # db-LaCAM: Theoretical Properties {#preview}
@@ -741,7 +790,7 @@ Exhaustive search eventually finds a solution, while stochastic motion sampling 
 
 # db-LaCAM: Performance Evaluation {#preview}
 
-Platforms: 10 Sanity drones, 4 Ploulu robots with attached trailers.
+Platforms: 10 Sanity drones, 4 Polulu robots with attached trailers.
 
 ```{=html}
 <video data-autoplay loop muted playsinline src="media/video/nu/dblacam.mp4" width="100%"></video>
@@ -898,26 +947,342 @@ Safe, Fast Motion Planning
 
 . . .
 
-- Motion planning for unmodeled dynamics - <span style="color: red;">
-  Difficult to model dynamics, that are under external disturbances
+- Motion planning for unmodeled dynamics
   </span>
 
 . . .
 
-- Task and Motion Planning Integration/*System-level Intelligence* - Internal decision-making mechanisms that allocate tasks based on individual capabilities and global objectives.
+- Task and Motion Planning Integration/*System-level Intelligence* 
+
+<!-- Internal decision-making mechanisms that allocate tasks based on individual capabilities and global objectives. -->
 
 . . . 
 
-- Real-Time Performance and Guarantees - Balancing formal guarantees with real-time computational performance.
+- Real-Time performance and guarantees 
+<!-- - Balancing formal guarantees with real-time computational performance. -->
 
 . . . 
 
-- Benchmarking and Standardization - Reproducibility and fair comparison between different methods.
+- Benchmarking and Standardization 
+<!-- Reproducibility and fair comparison between different methods. -->
 
 
 
 # Thanks to
 
-all my collaborators and co-authors!
+all my collaborators and co-authors!<br>
+
+. . . 
+
+<div style="text-align: left;">
+<span style="color: black;"><b>Intelligent Multi-Robot Coordination, Learning and Intelligent System groups at TU Berlin</b></span><br>
+Wolfgang Hönig, Marc Toussaint, Ilaria Cicchetti-Nilsson, Thalia Prokopiou, Jana Peich, Quim Ortiz-Haro, Khaled Wahba, Pia Hanfeld, Svetlana Levit, Christoph Scherer, Omar Elsayed, Valentin Hartmann, Danny Driess, Ingmar Schubert,
+Jung-Su Ha, Welf Rehberg, Dennis Schmidt, Denis Scherba, Eckart Cobo Briesewitz, Hongyou
+Zhou, Cornelius Braun, Shiping Ma, Sayantan Auddy, Nan Cai, Pablo Robles Cervantes, Julien
+Thévenoz, Jan Achermann, Leon Thormeyer, Jiaming Li, Johannes Roser, Viktor Lorentz, Keerthana Laxmish, Jana Schicke, Charlotte Stentzler, Julius Franke, Max Klemens.
+<br>
+<div>
+
+<div style="text-align: left;">
+<span style="color: black;"><b>External </b></span> Keisuke Okumura, Amanda Prorok, Prorok Lab at the University of Cambridge.
+<div>
+
+. . . 
+
+<div style="text-align: left; margin-top: 2cm">
+Family and Friends
+</div>
+
+. . . 
+
+<div style="text-align: left; margin-top: 2cm">
+Committee:
+</div>
+<div style="text-align: left;">
+Prof. Dr. Nora Ayanian, Prof. Dr. Sven Koenig, Prof. Dr. Wolfgang Hönig, Prof. Dr. Marc Toussaint
+</div>
+
+. . . 
+
+<div style="text-align: left; margin-top: 2cm">
+Thanks for your attention!
+</div>
 
 # References I
+
+
+# Additional Material
+
+# Virtual Omnidirectional Perception {#preview}
+
+```{=html}
+<video data-autoplay loop muted playsinline src="media/video/phd-defense/rotating-camera.mp4" width="50%"></video>
+```
+
+. . . 
+
+- Wall inspection
+- Landing for charging
+- Object transportation
+
+# Hyperparameters for db-ECBS motion planner {#preview}
+
+<img src="media/image/phd-defense/additional-material/varying-delta-analysis.png" width="60%">
+
+
+Large $\delta$ - needs few motion primitives &rarr; lower computation time <br>
+
+Smaller $\delta$ - requires more motion primitives &rarr; higher computation time.
+
+
+
+# discontinuity-bound value vs. Number of Motion Primitives {#preview}
+
+<img src="media/image/phd-defense/additional-material/delta-vs-primitives.png" width="50%">
+
+
+# Trajectory Optimization {#preview}
+
+<img src="media/image/phd-defense/additional-material/optimization-analysis.png" width="75%">
+
+# Trajectory Optimization Complexity {#preview}
+
+\begin{equation}
+  \mathcal{O}\left(K\left(\sum_{i=1}^{N} \max\left(d_x^{(i)},d_u^{(i)}\right)\right)^3\right),
+\end{equation}
+
+$d^{(i)}_x, d^{(i)}_u$ - state and action dimensions of robot $i$, 
+$N$ - number of robots, 
+$K = \max_{i \in N} K^{(i)}$, $K^{(i)}$ - number of time steps in the discrete search solution of the $i^{\text{th}}$ robot.
+
+
+
+# Trajectory Optimization Failure {#preview}
+
+. . . 
+
+- Slow convergence due to the high number of decision variables &rarr; exceeds the time limit. <br>
+<span style="color: green;">Solution: meta-optimization</span>
+
+. . . 
+
+- Poor discrete solution &rarr; collision violations. <br>
+<span style="color: green;">Solution: provide *better* set of motion primitives</span>
+
+
+# db-LaCAM: Livelock Handling {#preview}
+
+Space-Cover and Goal-Oriented Clustering improved the solution quality
+
+```{=html}
+<video data-autoplay loop muted playsinline src="media/video/phd-defense/livelock-behaviour.mp4" width="80%"></video>
+```
+. . . 
+
+Assumptions: 
+
+- Accurate *h-value* estimation
+- Given finite search space and expressive motion primitives
+
+
+# db-LaCAM: Livelock Handling {#preview}
+
+Tight environments can cause livelocks
+
+```{=html}
+<video data-autoplay loop muted playsinline src="media/video/phd-defense/livelock-dblacam.mp4" width="100%"></video>
+```
+. . . 
+
+<span style="color: green;">Solution: better heuristics, that could predict livelong settings and avoid it (GNN-based, f.i)</span>
+
+# db-ECBS Node Expansion {#preview}
+
+<img src="media/image/phd-defense/additional-material/db-expansion.png" width="100%">
+
+
+
+# db-CBS vs. db-ECBS with $\omega=1$
+
+::: {.container}
+
+:::: {.col}
+::: {.box-def-two}
+:::: {.box-blue-title}
+db-CBS
+::::
+
+- f = g (cost-to-come) + h (<span style="color: green;">cost-to-go</span> )
+- Discrete search runtime is 5.9 s (average)
+<img src="media/image/phd-defense/additional-material/dbcbs-discrete-1.png" width="100%">
+
+:::
+::::
+
+:::: {.col}
+::: {.box-def-two}
+:::: {.box-blue-title}
+db-ECBS
+::::
+
+- f = g (cost-to-come) + h (<span style="color: green;">collisions</span> )
+-  Discrete search runtime is 50.8 s (average)
+<img src="media/image/phd-defense/additional-material/dbecbs-discrete-1.png" width="100%">
+
+:::
+::::
+
+:::
+
+Even though FOCAL = OPEN for db-ECBS
+
+
+# db-CBS with Interaction Awareness
+
+. . . 
+
+
+- Change dynamics (as in db-ECBS)
+
+$\dot{\mathbf{x}}^{(i)} = \mathbf{f}^{(i)}(\mathbf{x}^{(i)}, \mathbf{u}^{(i)})$  &rarr;  $\dot{\mathbf{x}}^{(i)} = \mathbf{f}^{(i)}(\mathbf{x}^{(i)}, \mathbf{u}^{(i)}, \mathbf{\psi}^{(i)}(\mathbf{r}^{(i)}))$, <br>
+$\mathbf{\psi}^{(i)}(\cdot)$ - additional disturbance force.
+
+. . .
+
+- Create constraints from <span style="color: orange;">inter-robot interactions</span>, beyond collisions during the discrete search
+
+# db-PIBT with Interaction Awareness
+
+. . . 
+
+- No need to alter the robot's state
+
+- While rolling out motions, check each state for <span style="color: orange;">inter-robot interactions</span>, beyond collisions.
+
+# db-ECBS with Omnidirectional Vision {#preview}
+
+- Outdoor deployment
+- No localization (except for starting state)
+- Offline motion planning &rarr; Execution stage
+
+. . . 
+
+![](media/image/phd-defense/additional-material/dbecbs-with-vision1.png)
+
+
+# db-ECBS with Omnidirectional Vision {#preview}
+
+
+::: {.r-stack}
+
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/additional-material/dbecbs-with-vision1.png)
+
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/additional-material/dbecbs-with-vision2.png)
+
+:::: 
+:::{.element: class="fragment"}
+![](media/image/phd-defense/additional-material/dbecbs-with-vision3.png)
+::::
+:::
+
+
+# Fixing the discontinuity {#preview}
+
+::: {.container}
+
+:::: {.col}
+::: {.box-def-two-wide}
+:::: {.box-blue-title}
+w/ Rollout
+::::
+- 3D environment + <span style="color: red">narrow pass</span>
+- High-dimensional dynamics - <span style="color: red">Lipschitz continuity</span> breaks
+- <span style="color: red">Expensive search</span> with car-with-trailer
+
+::: {.r-stack}
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/additional-material/rollout-struggle-1.png)
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/additional-material/rollout-struggle-2.png)
+::::
+
+
+:::
+
+:::
+::::
+
+
+:::: {.col}
+::: {.box-def-two-wide}
+:::: {.box-blue-title}
+w/ Optimization
+::::
+- <span style="color: red">Narrow pass</span> - collision violations
+- <span style="color: red">Large environment</span>
+
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/complexity-scalability.png)
+::::
+
+:::
+::::
+
+:::
+
+
+
+# Termination Guarantee for db-CBS/ECBS {#preview}
+
+- Compute an upper-bound of the cost (w/ complete, suboptimal polynomial alg.)
+
+<img src="media/image/phd-defense/additional-material/termination-guarantee.png" width="90%">
+
+
+- OPEN set keeps nodes with cost < upper bound cost, this makes sure that the OPEN set gets empty.
+
+
+# Benchmarking Problem Instances {#preview}
+
+<img src="media/image/phd-defense/additional-material/instances.png" width="100%">
+
+
+# Benchmarking Problem Instances {#preview}
+
+::: {.container}
+
+:::: {.col}
+::: {.box-def-two}
+:::: {.box-blue-title}
+Environment Properties
+::::
+- Dimensions — width × height × height (2D/3D)
+- Obstacle geometry — boxes, arbitrary meshes
+- Obstacle size — dimensions/radius
+- Obstacle placement — positions
+- Narrow passages — minimum corridor/window width
+:::
+::::
+
+:::: {.col}
+::: {.box-def-two}
+:::: {.box-blue-title}
+Robot Properties
+::::
+- Number of robots
+- Robot geometry — sphere, ellipsoid, box, etc.
+- Robot size — radius / dimensions
+- Robot state dimension
+- Robot control dimension
+- Robot state, action limits
+- Dynamics model — integrator, unicycle, car-with-trailer, etc.
+- Heterogeneity — whether robots have different dynamics, sizes
+- Initial and goal states
+:::
+::::
+
+:::

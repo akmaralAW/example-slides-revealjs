@@ -188,7 +188,7 @@ $\mathbf{\psi}^{(i)}(\cdot)$ - additional disturbance force.
 w/ Rollout
 ::::
 - 3D environment + <span style="color: red">narrow pass</span>
-- Failure due to <span style="color: red">state-bound</span> violations
+- High-dimensional dynamics - <span style="color: red">Lipschitz continuity</span> breaks
 - <span style="color: red">Expensive search</span> with car-with-trailer
 
 ::: {.r-stack}
