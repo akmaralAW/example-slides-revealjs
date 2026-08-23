@@ -292,7 +292,7 @@ MAPF
 <img src="media/image/phd-defense/mapf.png" width="100%">
 
 <div style="font-size:0.6em; color:gray; margin-top:-1.1em;">
-Sharon et al., 2015; SJ. Li, Chen, et al., 2021; Okumura, 2023b; 
+Sharon et al., 2015; J. Li, Chen, et al., 2021; Okumura, 2023b; 
 </div>
 
 :::
@@ -792,14 +792,29 @@ Moldagalieva, A., Okumura, K., Prorok, A., Hönig, W. (2026) <i> db-LaCAM: Fast 
 ::::
 :::
 
-# db-LaCAM: Why Efficient?
+# db-LaCAM: Why Efficient? {#preview}
 
+. . . 
+
+- db-PIBT 
+
+. . . 
+
+- h-value estimation with Hierachical EST 
+
+<img src="media/image/phd-defense/node-expansion.png" width="40%">
+
+. . . 
+
+- Motion clustering methods
+
+<img src="media/image/phd-defense/clustering.png" width="40%">
 
 # db-LaCAM: Theoretical Properties {#preview}
 
 <div class="empty-box">
-db-LaCAM is *probabilistically complete up to the resolution* of its motion-primitive graph. 
-Exhaustive search eventually finds a solution, while stochastic motion sampling gives a non-zero probability of selecting the required motions.
+db-LaCAM is *probabilistically complete* up to the resolution of its motion-primitive graph. 
+<!-- Exhaustive search eventually finds a solution, while stochastic motion sampling gives a non-zero probability of selecting the required motions. -->
 </div>
 
 # db-LaCAM: Performance Evaluation {#preview}
@@ -898,9 +913,9 @@ Safe, Fast Motion Planning
 
   <div class="result-box">
   - high-quality solutions
-  - scalability across heterogeneous robot dynamics
+  - heterogeneous robot dynamics
   <br>
-  <span style="color: #0072B2; position: relative; top: 130px; left: 5px;">
+  <span style="color: #0072B2; position: relative; top: 165px; left: 5px;">
     (Ch. 4 - ICRA 2024)<br>
     (Ch. 5 - Preprint)
   </span>
@@ -961,15 +976,16 @@ Safe, Fast Motion Planning
 <div class="parts-result-boxes">
 
   <div class="result-red-box">
-  In obstacle-dense environments, the planner can spend significant time resolving conflicts.
+  - In obstacle-dense environments, the planner can spend significant time resolving conflicts.
   </div>
 
   <div class="result-red-box">
-  The joint-state space trajectory optimization scales poorly with large robot teams.
+  - The joint-state space trajectory optimization scales poorly with large robot teams.
   </div>
 
   <div class="result-red-box">
-  With non-accurate heuristic estimation, the planner can be inefficient.
+  - With non-accurate heuristic estimation, the planner can be inefficient.
+  - Livelock scenes have poor quality solutions
   </div>
 
 </div>
@@ -985,7 +1001,7 @@ Safe, Fast Motion Planning
 
 . . .
 
-- Task and Motion Planning Integration/*System-level Intelligence* 
+- Task and Motion Planning Integration/System-level Intelligence 
 
 <!-- Internal decision-making mechanisms that allocate tasks based on individual capabilities and global objectives. -->
 
@@ -1041,11 +1057,43 @@ Prof. Dr. Nora Ayanian, Prof. Dr. Sven Koenig, Prof. Dr. Wolfgang Hönig, Prof. 
 Thanks for your attention!
 </div>
 
-# References I
+# References I {#preview}
+<div style="text-align: left;">
+Sharon, G., Stern, R., Felner, A., & Sturtevant, N. R. (2015). Conflict-based search for optimal
+multi-agent pathfinding. Artificial Intelligence (AIJ)<br>
+Li, J., Chen, Z., Harabor, D., Stuckey, P. J., & Koenig, S. (2021). Anytime multi-agent path
+finding via large neighborhood search. International Joint Conference on Artificial In-
+telligence (IJCAI)<br>
+Okumura, K. (2023). Lacam: Search-based algorithm for quick multi-agent pathfinding. Conference on Artificial Intelligence (AAAI)<br>
+Hönig, W., Preiss, J. A., Kumar, T. K. S., Sukhatme, G. S., & Ayanian, N. (2018). Trajectory
+planning for quadrotor swarms. IEEE Transactions on Robotics (T-RO)<br>
+Luis, C. E., Vukosavljev, M., & Schoellig, A. P. (2020). Online trajectory generation with dis-
+tributed model predictive control for multi-robot motion planning. IEEE Robotics and
+Automation Letters (RA-L)<br>
+Senbaslar, B., Hönig, W., & Ayanian, N. (2023). RLSS: real-time, decentralized, cooperative, net-
+workless multi-robot trajectory planning using linear spatial separations. Autonomous
+Robots<br> 
+Yan, J., & Li, J. (2024). Multi-agent motion planning with bézier curve optimization under
+kinodynamic constraints. IEEE Robotics and Automation Letters (RA-L)<br>
+Hönig, W., Preiss, J. A., Kumar, T. K. S., Sukhatme, G. S., & Ayanian, N. (2018). Trajectory
+planning for quadrotor swarms. IEEE Transactions on Robotics (T-RO)<br>
+Shi, G., Hönig, W., Shi, X., Yue, Y., & Chung, S.-J. (2022). Neural-swarm2: Planning and control
+of heterogeneous multirotor swarms using learned interactions. IEEE Transactions on
+Robotics (T-RO)<br>
+Li, J., Han, L., Yu, H., Lin, Y., Li, Q., & Ren, Z. (2023). Nonlinear mpc for quadrotors in close-
+proximity flight with neural network downwash prediction. IEEE Conference on Deci-
+sion and Control (CDC)
+<div>
 
 
 # Image References
-
+<div style="text-align: left;">
+[1] Long-Horizon Multi-Robot Rearrangement Planning for Construction Assembly, Valentin N.
+Hartmann, Andreas Orthey, Danny Driess, Ozgur S. Oguz, Marc Toussaint. IEEE T-RO 2022<br>
+[2] Control of over-redundant cooperative manipulation via sampled communication, Enrica Rossi, Marco Tognon, Ruggero Carli, Antonio Franchi, Luca Schenato. Pre-print 2021<br>
+[3] https://www.independent.co.uk/news/business/robots-amazon-delivery-artificial-intelligence-technology-a9264036.html<br>
+[4] https://www.market-prospects.com/articles/ai-robots-disrupt-the-manufacturing-industry
+<div>
 
 # Additional Material
 
