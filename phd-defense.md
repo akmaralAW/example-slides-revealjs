@@ -506,7 +506,7 @@ Conservative Planner
 
 <img src="media/image/phd-defense/conservative.png" width="55%">
 
-<div style="font-size:0.6em; color:gray; margin-top:0.1em;">
+<div style="font-size:0.6em; color:gray; margin-top:-1.6em;">
 Hönig et al., 2018;
 </div>
 :::
@@ -590,11 +590,44 @@ Moldagalieva, A., Ortiz-Haro, J., Hönig, W. (2025) <i>db-ECBS: Interaction-Awar
 ::::
 :::
 
-# db-ECBS: Extending ECBS {#preview}
+# db-ECBS: Enhancements to db-CBS {#preview}
 
-<div class="empty-box">
-- 
-</div>
+. . . 
+
+- FOCAL set
+
+$$
+F = \{\, n \mid n \in O,\; n.\mathrm{cost} \leq \omega \cdot LB \,\}
+$$
+
+. . . 
+
+- Interaction-awareness
+
+  - Robot's state, dynamics change 
+
+    $$
+      x_{k+1}
+      \approx
+      \operatorname{step}\!\left(
+      x_k,
+      u_k,
+      {\color{orange}{\psi\!\left(r_k\right)}}
+       \right)\Delta t
+    $$
+
+  - Focal heuristic ($f_h$) computation
+
+    ::: {.r-stack}
+
+    :::{.element: class="fragment current-visible"}
+    ![](media/image/phd-defense/focal-heuristic-1.png)
+    ::::
+
+    :::{.element: class="fragment"}
+    ![](media/image/phd-defense/focal-heuristic-2.png)
+    ::::
+    :::
 
 
 # db-ECBS: Performance Evaluation {#preview}
@@ -968,7 +1001,7 @@ Safe, Fast Motion Planning
 
 
 
-# Thanks to
+# Thanks to {#preview}
 
 all my collaborators and co-authors!<br>
 
@@ -1009,6 +1042,9 @@ Thanks for your attention!
 </div>
 
 # References I
+
+
+# Image References
 
 
 # Additional Material
