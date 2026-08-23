@@ -20,7 +20,7 @@ Multiple robots can accomplish tasks that are impossible, inefficient, or unsafe
 
 . . . 
 
-Autonomy of a team of robots requires being able to reach the goal quickly while avoiding collisions with obstacles and other robots.
+Autonomous multi-robot systems require effective coordination to efficiently achieve their goals while safely managing interactions among robots and with the environment.
 
 # Multi-Robot Coordination {#preview}
 
@@ -727,7 +727,7 @@ Interaction Awareness for Motion Planning
 # Computational Effort in db-ECBS Motion Planner {#preview}
 
 <img src="media/image/phd-defense/complexity-scalability.png"
-     style="width: 60%; height: auto;">
+     style="width: 50%; height: auto;">
 
 \begin{equation}
   \mathcal{O}\left(K\left(\sum_{i=1}^{N} \max\left(d_x^{(i)},d_u^{(i)}\right)\right)^3\right)
@@ -1038,13 +1038,13 @@ Thévenoz, Jan Achermann, Leon Thormeyer, Jiaming Li, Johannes Roser, Viktor Lor
 
 . . . 
 
-<div style="text-align: left; margin-top: 2cm">
+<div style="text-align: left; margin-top: 1.5cm">
 Family and Friends
 </div>
 
 . . . 
 
-<div style="text-align: left; margin-top: 2cm">
+<div style="text-align: left; margin-top: 1.5cm">
 Committee:
 </div>
 <div style="text-align: left;">
@@ -1053,7 +1053,7 @@ Prof. Dr. Nora Ayanian, Prof. Dr. Sven Koenig, Prof. Dr. Wolfgang Hönig, Prof. 
 
 . . . 
 
-<div style="text-align: left; margin-top: 2cm">
+<div style="text-align: left; margin-top: 1.5cm">
 Thanks for your attention!
 </div>
 
