@@ -854,15 +854,12 @@ Platforms: 10 Sanity drones, 4 Polulu robots with attached trailers.
 ```
 # db-LaCAM: Limitations {#preview}
 
- - Tight environments can cause livelocks
+
+- Struggles with instances with narrow passes
 
 ```{=html}
 <video data-autoplay loop muted playsinline src="media/video/phd-defense/livelock-dblacam.mp4" width="100%"></video>
 ```
-
-. . . 
-
-- Struggles with instances with narrow passes
 
 
 # Conclusion
@@ -1109,6 +1106,38 @@ Hartmann, Andreas Orthey, Danny Driess, Ozgur S. Oguz, Marc Toussaint. IEEE T-RO
 - Landing for charging
 - Object transportation
 
+
+# db-ECBS with Omnidirectional Vision {#preview}vs.
+
+- Outdoor deployment
+- No localization (except for starting state)
+- Offline motion planning &rarr; Execution stage
+
+. . . 
+
+![](media/image/phd-defense/additional-material/dbecbs-with-vision1.png)
+
+
+# db-ECBS with Omnidirectional Vision {#preview}
+
+
+::: {.r-stack}
+
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/additional-material/dbecbs-with-vision1.png)
+
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/additional-material/dbecbs-with-vision2.png)
+
+:::: 
+:::{.element: class="fragment"}
+![](media/image/phd-defense/additional-material/dbecbs-with-vision3.png)
+::::
+:::
+
+
+
 # Hyperparameters for db-ECBS motion planner {#preview}
 
 <img src="media/image/phd-defense/additional-material/varying-delta-analysis.png" width="60%">
@@ -1197,7 +1226,7 @@ db-CBS
 ::::
 
 - f = g (cost-to-come) + h (<span style="color: green;">cost-to-go</span> )
-- Discrete search runtime is 5.9 s (average)
+- Discrete search runtime is 50.8 s (average)
 <img src="media/image/phd-defense/additional-material/dbcbs-discrete-1.png" width="100%">
 
 :::
@@ -1210,7 +1239,7 @@ db-ECBS
 ::::
 
 - f = g (cost-to-come) + h (<span style="color: green;">collisions</span> )
--  Discrete search runtime is 50.8 s (average)
+-  Discrete search runtime is 5.9 s (average)
 <img src="media/image/phd-defense/additional-material/dbecbs-discrete-1.png" width="100%">
 
 :::
@@ -1233,7 +1262,8 @@ $\mathbf{\psi}^{(i)}(\cdot)$ - additional disturbance force.
 
 . . .
 
-- Create constraints from <span style="color: orange;">inter-robot interactions</span>, beyond collisions during the discrete search
+- Create constraints from <span style="color: orange;">inter-robot interactions</span>, beyond inter-robot collisions
+
 
 # db-PIBT with Interaction Awareness
 
@@ -1241,36 +1271,9 @@ $\mathbf{\psi}^{(i)}(\cdot)$ - additional disturbance force.
 
 - No need to alter the robot's state
 
-- While rolling out motions, check each state for <span style="color: orange;">inter-robot interactions</span>, beyond collisions.
-
-# db-ECBS with Omnidirectional Vision {#preview}
-
-- Outdoor deployment
-- No localization (except for starting state)
-- Offline motion planning &rarr; Execution stage
-
-. . . 
-
-![](media/image/phd-defense/additional-material/dbecbs-with-vision1.png)
+- While rolling out motions, check each state for <span style="color: orange;">inter-robot interactions</span>, beyond collisions 
 
 
-# db-ECBS with Omnidirectional Vision {#preview}
-
-
-::: {.r-stack}
-
-:::{.element: class="fragment current-visible"}
-![](media/image/phd-defense/additional-material/dbecbs-with-vision1.png)
-
-::::
-:::{.element: class="fragment current-visible"}
-![](media/image/phd-defense/additional-material/dbecbs-with-vision2.png)
-
-:::: 
-:::{.element: class="fragment"}
-![](media/image/phd-defense/additional-material/dbecbs-with-vision3.png)
-::::
-:::
 
 
 # Fixing the discontinuity {#preview}
