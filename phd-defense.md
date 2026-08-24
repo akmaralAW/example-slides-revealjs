@@ -71,7 +71,7 @@ Interaction Awareness for Motion Planning
 </div>
 
 <div>
-Safe, Fast Motion Planning
+Fast, Scalable Motion Planning
 <img src="media/image/phd-defense/partIII.png" width="50%">
 
 </div>
@@ -114,7 +114,7 @@ Interaction Awareness for Motion Planning
 </div>
 
 <div>
-Safe, Fast Motion Planning
+Fast, Scalable Motion Planning
 <img src="media/image/phd-defense/partIII.png" width="50%">
 
 </div>
@@ -154,7 +154,7 @@ Interaction Awareness for Motion Planning
 
 <div>
 <b>Part III</b><br>
-Safe, Fast Motion Planning
+Fast, Scalable Motion Planning
 <img src="media/image/phd-defense/partIII.png" width="50%">
 </div>
 
@@ -229,7 +229,7 @@ Interaction Awareness for Motion Planning
 
 <div>
 <b>Part III</b><br>
-Safe, Fast Motion Planning
+Fast, Scalable Motion Planning
 <img src="media/image/phd-defense/partIII.png" width="50%">
 </div>
 
@@ -265,7 +265,7 @@ Interaction Awareness for Motion Planning
 
 <div>
 <b>Part III</b><br>
-Safe, Fast Motion Planning
+Fast, Scalable Motion Planning
 <img src="media/image/phd-defense/partIII.png" width="50%">
 </div>
 
@@ -467,7 +467,7 @@ Time-Optimal Motion Planning
 
 <div>
 <b>Part III</b><br>
-Safe, Fast Motion Planning
+Fast, Scalable Motion Planning
 <img src="media/image/phd-defense/partIII.png" width="50%">
 
 </div>
@@ -671,7 +671,7 @@ $$
 
 *Take away*:  Ellipsoidal robot shapes cause more frequent collisions in this small environment, increasing conflict-resolution time.
 
-# db-ECBS: Limitations
+# db-ECBS: Limitations {#preview}
 
 . . . 
 
@@ -709,7 +709,7 @@ Interaction Awareness for Motion Planning
 
 <div>
 <b><span style="color:#0072B2;">Part III</span></b><br>
-<span style="color:#0072B2;">Safe, Fast Motion Planning</span>
+<span style="color:#0072B2;">Fast, Scalable Motion Planning</span>
 <img src="media/image/phd-defense/partIII.png" width="50%">
 
 <div style="font-size:0.75em;">
@@ -792,7 +792,7 @@ Moldagalieva, A., Okumura, K., Prorok, A., Hönig, W. (2026) <i> db-LaCAM: Fast 
 ::::
 :::
 
-# db-LaCAM: Why Efficient? {#preview}
+# db-LaCAM: Why Is It Efficient? {#preview}
 
 . . . 
 
@@ -868,11 +868,11 @@ Platforms: 10 Sanity drones, 4 Polulu robots with attached trailers.
 
 ::: {.box-green}
 :::: {.box-green-title}
-Physically realistic planning &rarr; Real-world deployment
+MAPF &rarr; Time-Optimal Physically Realistic Motion Planning  
 ::::
-- Plan motions that respect what robots can actually execute
-- Move beyond simplified models to heterogeneous robot dynamics
-- Bring multi-robot planning closer to real-world autonomous operation
+- Offline motion planners grounded with theoretical guarantees
+- Cross-algorithm benchmark
+- 
 :::
 
 
@@ -898,7 +898,7 @@ Interaction Awareness for Motion Planning
 
 <div class="part-column">
 <b>Part III</b><br>
-Safe, Fast Motion Planning
+Fast, Scalable Motion Planning
 </div>
 
 </div>
@@ -963,7 +963,7 @@ Interaction Awareness for Motion Planning
 
 <div class="part-column">
 <b>Part III</b><br>
-Safe, Fast Motion Planning
+Fast, Scalable Motion Planning
 </div>
 
 </div>
@@ -1107,7 +1107,7 @@ Hartmann, Andreas Orthey, Danny Driess, Ozgur S. Oguz, Marc Toussaint. IEEE T-RO
 - Object transportation
 
 
-# db-ECBS with Omnidirectional Vision {#preview}vs.
+# db-ECBS with Omnidirectional Vision {#preview}
 
 - Outdoor deployment
 - No localization (except for starting state)
@@ -1310,7 +1310,7 @@ w/ Rollout
 w/ Optimization
 ::::
 - <span style="color: red">Narrow pass</span> - collision violations
-- <span style="color: red">Large environment</span>
+- <span style="color: red">Large robot teams</span>
 
 :::{.element: class="fragment current-visible"}
 ![](media/image/phd-defense/complexity-scalability.png)
