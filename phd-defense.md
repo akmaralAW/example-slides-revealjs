@@ -51,7 +51,7 @@ Autonomous multi-robot systems require effective coordination to efficiently ach
 :::
 
 ::: {.fragment data-fragment-index="3"}
-- Scalability & Efficiency: Can motion planning be fast and scalable?
+- Scalability & Efficiency: Can multi-robot coordination be computationally fast and scalable?
 :::
 
 # Dissertation Contributions {#preview}
@@ -862,7 +862,37 @@ Platforms: 10 Sanity drones, 4 Polulu robots with attached trailers.
 ```
 
 
-# Conclusion
+<!-- # Conclusion -->
+
+<ul class="overview">
+  <li>Introduction, Background</li>
+  <li>Kinodynamic Motion Planning for Multi-Robot Systems</li>
+</ul>
+
+<div class="three-columns">
+
+<div>
+<b>Part I</b><br>
+Time-Optimal Motion Planning
+<img src="media/image/phd-defense/partI.png" width="50%">
+</div>
+
+<div>
+<b>Part II</b><br>
+Interaction Awareness for Motion Planning
+<img src="media/image/phd-defense/partII.png" width="50%">
+</div>
+
+<div>
+<b>Part III</b><br>
+Fast, Scalable Motion Planning
+<img src="media/image/phd-defense/partIII.png" width="50%">
+</div>
+
+</div>
+
+<!-- - Conclusion and Future Work -->
+- <li class="active">Conclusion and Future Work</li>
 
 # Conclusion: Impact of Research Results
 
@@ -872,7 +902,6 @@ MAPF &rarr; Time-Optimal Physically Realistic Motion Planning
 ::::
 - Offline motion planners grounded with theoretical guarantees
 - Cross-algorithm benchmark
-- 
 :::
 
 
@@ -963,7 +992,7 @@ Interaction Awareness for Motion Planning
 
 <div class="part-column">
 <b>Part III</b><br>
-Fast, Scalable Motion Planning
+Scalable, Fast Motion Planning
 </div>
 
 </div>
