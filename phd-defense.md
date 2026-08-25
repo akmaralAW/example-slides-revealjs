@@ -291,7 +291,7 @@ MAPF
 - <span style="color:red">Ignores robot dynamics</span>
 <img src="media/image/phd-defense/mapf.png" width="100%">
 
-<div style="font-size:0.6em; color:gray; margin-top:-1.1em;">
+<div style="font-size:0.6em; color:gray; margin-top:-0.7em;">
 Sharon et al., 2015; J. Li, Chen, et al., 2021; Okumura, 2023b; 
 </div>
 
@@ -863,6 +863,7 @@ Platforms: 10 Sanity drones, 4 Polulu robots with attached trailers.
 
 
 <!-- # Conclusion -->
+# Presentation Overview 
 
 <ul class="overview">
   <li>Introduction, Background</li>
@@ -891,8 +892,7 @@ Fast, Scalable Motion Planning
 
 </div>
 
-<!-- - Conclusion and Future Work -->
-- <li class="active">Conclusion and Future Work</li>
+- <b><span style="color:#0072B2;">Conclusion and Future Work</span></b><br>
 
 # Conclusion: Impact of Research Results
 
