@@ -16,19 +16,16 @@ controls: false
 
 ## Overview {#preview}
 
-. . . 
 
 - Introduction
 
-. . . 
-
 - Multi-Robot Motion Planning Methods 
 
-. . . 
+- Interaction-Aware Multi-Robot Motion Planning
 
-- Overview of my Dissertation
+- Fast and Scalable Multi-Robot Motion Planning
 
-. . .  
+- Benchmarking Framework
 
 - Summary 
 
@@ -608,7 +605,7 @@ Robot Properties
 
 . . .
 
-- There is no motion planners, which is generic (for now!)
+- There is no motion planner which is generic (for now!)
 
 . . . 
 
@@ -618,3 +615,31 @@ Robot Properties
 
 
 <p style="font-size: 0.7em; color: gray;">You can also email me at: akmaral.moldagalieva@alumni.nu.edu.kz</p>
+
+## References {#preview}
+<div style="text-align: left;">
+Sharon, G., Stern, R., Felner, A., & Sturtevant, N. R. (2015). Conflict-based search for optimal
+multi-agent pathfinding. Artificial Intelligence (AIJ)<br>
+Li, J., Chen, Z., Harabor, D., Stuckey, P. J., & Koenig, S. (2021). Anytime multi-agent path
+finding via large neighborhood search. International Joint Conference on Artificial In-
+telligence (IJCAI)<br>
+Okumura, K. (2023). Lacam: Search-based algorithm for quick multi-agent pathfinding. Conference on Artificial Intelligence (AAAI)<br>
+Hönig, W., Preiss, J. A., Kumar, T. K. S., Sukhatme, G. S., & Ayanian, N. (2018). Trajectory
+planning for quadrotor swarms. IEEE Transactions on Robotics (T-RO)<br>
+Luis, C. E., Vukosavljev, M., & Schoellig, A. P. (2020). Online trajectory generation with dis-
+tributed model predictive control for multi-robot motion planning. IEEE Robotics and
+Automation Letters (RA-L)<br>
+Senbaslar, B., Hönig, W., & Ayanian, N. (2023). RLSS: real-time, decentralized, cooperative, net-
+workless multi-robot trajectory planning using linear spatial separations. Autonomous
+Robots<br> 
+Yan, J., & Li, J. (2024). Multi-agent motion planning with bézier curve optimization under
+kinodynamic constraints. IEEE Robotics and Automation Letters (RA-L)<br>
+Hönig, W., Preiss, J. A., Kumar, T. K. S., Sukhatme, G. S., & Ayanian, N. (2018). Trajectory
+planning for quadrotor swarms. IEEE Transactions on Robotics (T-RO)<br>
+Shi, G., Hönig, W., Shi, X., Yue, Y., & Chung, S.-J. (2022). Neural-swarm2: Planning and control
+of heterogeneous multirotor swarms using learned interactions. IEEE Transactions on
+Robotics (T-RO)<br>
+Li, J., Han, L., Yu, H., Lin, Y., Li, Q., & Ren, Z. (2023). Nonlinear mpc for quadrotors in close-
+proximity flight with neural network downwash prediction. IEEE Conference on Deci-
+sion and Control (CDC)
+<div>
