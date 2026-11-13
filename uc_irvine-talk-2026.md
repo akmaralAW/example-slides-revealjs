@@ -13,6 +13,18 @@ navigationMode: 'linear'
 controls: false
 ---
 
+## Overview
+
+- Introduction
+
+- Kinodynamic Motion Planning Methods
+
+- db-Search for Single and Multi-Robot Kinodynamic Motion Planning
+
+- Heuristic Estimation Methods
+
+- Summary
+
 # Introduction 
 
 ## Background
@@ -121,7 +133,7 @@ Hönig et al., 2023; Moldagalieva et al., 2024, Moldagalieva et al., 2025;
 
 
 
-## discontinuity-bounded Search
+## discontinuity-bounded/db-Search
 
 Allows for an user-defined discontinuity ($\delta$) between states (<span style="font-size:0.6em; color:gray;">Hönig et al., 2023 Ortiz-Haro et al., 2025</span>)
 
@@ -129,7 +141,7 @@ Allows for an user-defined discontinuity ($\delta$) between states (<span style=
 
 
 
-## discontinuity-bounded Search: Approach
+## db-Search: Discrete Search
 
 ::: {.r-stack}
 
@@ -154,11 +166,16 @@ $d : \mathcal{X} \times \mathcal{X} \rightarrow \mathbb{R}^{+}$ - function that 
 $\mathbf{x}_k$, $\mathbf{x}_m$ - robot state, motions first state.
 
 
-## discontinuity-bounded Search: Raw Output
+## db-Search: Discrete Search Output 
+
+![](media/image/talks/db-search4.png)
+
+
+## db-Search: Discrete Search Output
 
 
 ```{=html}
-<video data-autoplay loop muted playsinline src="media/video/talks/jumpy-solution-dbcbs.mp4" width="50%"></video>
+<video data-autoplay loop muted playsinline src="media/video/talks/jumpy-solution-dbcbs.mp4" width="60%"></video>
 ```
 
 . . . 
@@ -166,20 +183,217 @@ $\mathbf{x}_k$, $\mathbf{x}_m$ - robot state, motions first state.
 Output is jumpy - infeasible for real robot platforms. How to Fix It?
 
 
-## discontinuity-bounded Search: Fix discontinuous Jumps
+## db-Search: Fix discontinuous Jumps
 
-With trajectory optimization 
+With trajectory optimization (<span style="font-size:0.6em; color:gray;">Hönig et al., 2023 Ortiz-Haro et al., 2025</span>)
 
 ```{=html}
 <video data-autoplay loop muted playsinline src="media/video/talks/db-search.mp4" width="100%"></video>
 ```
 
-## discontinuity-bounded Search: multi-robot planning
+## db-Search: multi-robot motion planning
 
-CBS/ECBS + db-Search (<span style="font-size:0.6em; color:gray;">Moldagalieva et al., 2024, 2025</span>)
+CBS/ECBS + db-Search = db-CBS (<span style="font-size:0.6em; color:gray;">Sharon et al., 2015, Moldagalieva et al., 2024, Moldagalieva et al., 2025</span>)
+
+::: {.r-stack}
+
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dbcbs-1.png)
+
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dbcbs-2.png)
+
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dbcbs-3.png)
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dbcbs-4.png)
+:::: 
+:::{.element: class="fragment"}
+![](media/image/phd-defense/flowchart-dbcbs-5.png)
+::::
+:::
+
+
+## db-Search: multi-robot motion planning
+
+CBS/ECBS + db-Search (<span style="font-size:0.6em; color:gray;">Moldagalieva et al., 2024, Moldagalieva et al., 2025</span>)
 
 ```{=html}
 <video data-autoplay loop muted playsinline src="media/video/talks/dbecbs-intro.mp4" width="100%"></video>
 ```
+
+
+## db-Search with Optimization
+
+<img src="media/image/phd-defense/complexity-scalability.png"
+     style="width: 60%; height: auto;">
+
+\begin{equation}
+  \mathcal{O}\left(K\left(\sum_{i=1}^{N} \max\left(d_x^{(i)},d_u^{(i)}\right)\right)^3\right)
+\end{equation}
+
+$d^{(i)}_x, d^{(i)}_u$ - state and action dimensions of robot $i$, 
+$N$ - number of robots, 
+$K = \max_{i \in N} K^{(i)}$, $K^{(i)}$ - number of time steps in the discrete search solution of the $i^{\text{th}}$ robot.
+
+## Kinodynamic Motion Planning: Motion Primitives 
+
+![](media/image/talks/db-search4.png)
+
+. . . 
+
+No discontinuity *$\rightarrow$* No optimization
+
+
+## db-Search with Rollout
+
+::: {.r-stack}
+
+:::{.element: class="fragment current-visible"}
+![](media/image/talks/db-search-rollout-1.png)
+
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/talks/db-search-rollout-2.png)
+
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/talks/db-search-rollout-3.png)
+
+
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/talks/db-search-rollout-4.png)
+
+
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/talks/db-search-rollout-5.png)
+
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/talks/db-search-rollout-6.png)
+
+
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/talks/db-search-rollout-7.png)
+
+::::
+
+:::
+
+
+
+## db-Search: multi-robot motion planning
+
+LaCAM + db-Search = db-LaCAM (<span style="font-size:0.6em; color:gray;">Okumura et al., 2023, Moldagalieva et al., 2026</span>)
+
+::: {.r-stack}
+
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dblacam-1.png)
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dblacam-2.png)
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dblacam-3.png)
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dblacam-4.png)
+:::: 
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dblacam-5.png)
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dblacam-6.png)
+::::
+:::{.element: class="fragment current-visible"}
+![](media/image/phd-defense/flowchart-dblacam-6.5.png)
+::::
+:::{.element: class="fragment"}
+![](media/image/phd-defense/flowchart-dblacam-7.png)
+::::
+:::
+
+
+## db-Search: multi-robot motion planning
+
+LaCAM + db-Search = db-LaCAM (<span style="font-size:0.6em; color:gray;">Okumura et al., 2023, Moldagalieva et al., 2026</span>)
+
+```{=html}
+<video data-autoplay loop muted playsinline src="media/video/icaps/icaps-gif.mp4" width="70%"></video>
+```
+
+## db-Search: Rollout
+
+. . . 
+
+![](media/image/phd-defense/additional-material/rollout-struggle-1.png)
+
+3D environment + <span style="color: red">narrow pass</span>
+
+
+## db-Search: Rollout
+
+![](media/image/phd-defense/additional-material/rollout-struggle-2.png)
+
+High-dimensional dynamics - <span style="color: red">Lipschitz continuity</span> breaks
+
+
+## db-Search: Heuristic Estimation
+
+. . . 
+
+- Search efficiency
+
+. . . 
+
+- Euclidean distance might be not sufficient
+
+
+## db-Search: Heuristic Estimation - Classic
+
+::: {.r-stack}
+:::{.element: class="fragment current-visible" data-fragment-index="1"}
+![](media/image/talks/reverse-search-1.png)
+::::
+:::{.element: class="fragment current-visible" data-fragment-index="2"}
+![](media/image/talks/reverse-search-2.png)
+::::
+
+:::
+
+## db-Search: Heuristic Estimation - Hierarchical EST
+
+Guided Expansive Spaces Trees: a search strategy for motion- and cost-constrained state spaces (EST) (<span style="font-size:0.6em; color:gray;">J. Phillips et al., 2004</span>)
+
+::: {.r-stack}
+:::{.element: class="fragment current-visible" data-fragment-index="1"}
+![](media/image/icaps/hest1-arrow.png)
+::::
+:::{.element: class="fragment current-visible" data-fragment-index="2"}
+![](media/image/icaps/hest2.png)
+::::
+:::{.element: class="fragment current-visible" data-fragment-index="3"}
+![](media/image/icaps/hest3.png)
+::::
+:::{.element: class="fragment current-visible" data-fragment-index="4"}
+![](media/image/icaps/hest4.png)
+::::
+:::
+
+## db-Search: Classic vs. Hierarchical EST heuristic estimation
+
+![](media/image/talks/motion_preparation.png)
+
+
+# Summary 
+
+
 
 
