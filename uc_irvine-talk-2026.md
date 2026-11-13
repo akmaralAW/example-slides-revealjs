@@ -19,9 +19,9 @@ controls: false
 
 - Kinodynamic Motion Planning Methods
 
-- db-Search for Single and Multi-Robot Kinodynamic Motion Planning
+- discontinuity-bounded Search
 
-- Heuristic Estimation Methods
+- Heuristic Estimation for the discontinuity-bounded Search
 
 - Summary
 
@@ -96,8 +96,8 @@ Hönig et al., 2018; Luis et al., 2020;
 Senbaslar et al., 2023; Yan & Li, 2024;
 </div>
 
-- Discrete motion planning
-- Post-process with optimization
+- Represent the trajectory using Bézier control points
+- Adjust the control points to minimize an objective function
 - <span style="color:red">Limited dynamics</span>
 
 
@@ -333,19 +333,25 @@ LaCAM + db-Search = db-LaCAM (<span style="font-size:0.6em; color:gray;">Okumura
 
 . . . 
 
-![](media/image/phd-defense/additional-material/rollout-struggle-1.png)
+<img src="media/image/phd-defense/additional-material/rollout-struggle-1.png" width="600">
 
 3D environment + <span style="color: red">narrow pass</span>
 
 
 ## db-Search: Rollout
 
-![](media/image/phd-defense/additional-material/rollout-struggle-2.png)
+<img src="media/image/phd-defense/additional-material/rollout-struggle-2.png" width="500" height="400">
 
-High-dimensional dynamics - <span style="color: red">Lipschitz continuity</span> breaks
+High-dimensional dynamics: <span style="color: red">Lipschitz continuity</span> breaks
+
+## db-Search: Rollout
+
+<img src="media/image/talks/rollout-failure-2.png" width="600">
+
+State history matters: robots may <span style="color: red">get stuck</span> due to velocity-dependent dynamics.
 
 
-## db-Search: Heuristic Estimation
+## Heuristic Estimation
 
 . . . 
 
@@ -356,19 +362,7 @@ High-dimensional dynamics - <span style="color: red">Lipschitz continuity</span>
 - Euclidean distance might be not sufficient
 
 
-## db-Search: Heuristic Estimation - Classic
-
-::: {.r-stack}
-:::{.element: class="fragment current-visible" data-fragment-index="1"}
-![](media/image/talks/reverse-search-1.png)
-::::
-:::{.element: class="fragment current-visible" data-fragment-index="2"}
-![](media/image/talks/reverse-search-2.png)
-::::
-
-:::
-
-## db-Search: Heuristic Estimation - Hierarchical EST
+## Heuristic Estimation - Hierarchical EST
 
 Guided Expansive Spaces Trees: a search strategy for motion- and cost-constrained state spaces (EST) (<span style="font-size:0.6em; color:gray;">J. Phillips et al., 2004</span>)
 
@@ -387,12 +381,75 @@ Guided Expansive Spaces Trees: a search strategy for motion- and cost-constraine
 ::::
 :::
 
-## db-Search: Classic vs. Hierarchical EST heuristic estimation
+## Heuristic Estimation: Classic vs. Hierarchical EST
 
 ![](media/image/talks/motion_preparation.png)
 
+. . .
+
+Still expensive for some dynamics, like car-with-trailer.
+
+
+## Heuristic Estimation: Learning-based 
+
+GAMBIT: Learning to Plan Continuous Multi-Robot Trajectories (<span style="font-size:0.6em; color:gray;">Jain et al., 2026</span>)
+
+![](media/image/talks/gambit-1.png)
+
+. . . 
+
+Scalability up to $>1000$ double integrator dynamics
+
 
 # Summary 
+
+
+## Take Away
+
+- Robot dynamics matter
+
+. . . 
+
+- Classic planners struggle to handle corner cases
+
+
+# Thanks everyone! 
+
+
+## References I
+
+<div style="text-align: left;">
+Sharon, G., Stern, R., Felner, A., & Sturtevant, N. R. (2015). Conflict-based search for optimal multi-agent pathfinding. Artificial Intelligence (AIJ)<br>
+Li, J., Chen, Z., Harabor, D., Stuckey, P. J., & Koenig, S. (2021). Anytime multi-agent path
+finding via large neighborhood search. International Joint Conference on Artificial In-
+telligence (IJCAI)<br>
+Okumura, K. (2023). Lacam: Search-based algorithm for quick multi-agent pathfinding. Conference on Artificial Intelligence (AAAI)<br>
+Hönig, W., Preiss, J. A., Kumar, T. K. S., Sukhatme, G. S., & Ayanian, N. (2018). Trajectory
+planning for quadrotor swarms. IEEE Transactions on Robotics (T-RO)<br>
+Luis, C. E., Vukosavljev, M., & Schoellig, A. P. (2020). Online trajectory generation with distributed model predictive control for multi-robot motion planning. IEEE Robotics and
+Automation Letters (RA-L)<br>
+Senbaslar, B., Hönig, W., & Ayanian, N. (2023). RLSS: real-time, decentralized, cooperative, net-
+workless multi-robot trajectory planning using linear spatial separations. Autonomous
+Robots<br> 
+Yan, J., & Li, J. (2024). Multi-agent motion planning with bézier curve optimization under
+kinodynamic constraints. IEEE Robotics and Automation Letters (RA-L)<br>
+Hönig, W., Preiss, J. A., Kumar, T. K. S., Sukhatme, G. S., & Ayanian, N. (2018). Trajectory
+planning for quadrotor swarms. IEEE Transactions on Robotics (T-RO)<br>
+Jain, R., & Moldagalieva, A., Magnino, L., Amir, M., Okumura, K., Shankar, A., Hönig, W., Prorok, A. (2026). GAMBIT: Learning to Plan Continuous Multi-Robot Trajectories<br>
+<div>
+
+
+## References II
+
+<div style="text-align: left;">
+Moldagalieva, A., Ortiz-Haro, JQ., Toussaint, M., & Hönig, W. (2024). db-CBS: Discontinuity-Bounded Conflict-Based Search for Multi-Robot Kinodynamic Motion Planning. (ICRA)<br>
+Moldagalieva, A., Ortiz-Haro, JQ., M., & Hönig, W. (2025). db-ECBS: db-ECBS: Interaction-Aware Multirobot Kinodynamic Motion Planning. (T-RO)<br>
+Moldagalieva, A., Okumura, K., Prorok, A., M., & Hönig, W. (2026). db-lacam: Fast and scalable multi-robot kinodynamic motion planning with discontinuity-bounded search and lightweight mapf. (ICAPS)<br>
+Phillips, J., Bedrossian, N., & Kavraki, L. (2004). Guided Expansive Spaces Trees: a search strategy for motion- and cost-constrained state spaces. (ICRA).
+<div>
+
+
+
 
 
 
