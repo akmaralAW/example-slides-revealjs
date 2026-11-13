@@ -1,6 +1,7 @@
 ---
 title: Kinodynamic Motion Planning
 subtitle: Akmaral Moldagalieva
+author: IMD-Lab Group Meeting
 date: 13.11.2026
 theme: white
 title-slide-attributes:
@@ -21,7 +22,7 @@ controls: false
 
 - discontinuity-bounded Search
 
-- Heuristic Estimation for the discontinuity-bounded Search
+- Heuristic Estimation Methods
 
 - Summary
 
@@ -84,7 +85,7 @@ Motion planning now considers *how* to move, not just where.
 Hönig et al., 2018; Luis et al., 2020;
 </div>
 
-- Discrete motion planning
+- MAPF
 - Post-process with optimization
 - <span style="color:red">Suboptimal trajectories</span>
 
@@ -96,9 +97,8 @@ Hönig et al., 2018; Luis et al., 2020;
 Senbaslar et al., 2023; Yan & Li, 2024;
 </div>
 
-- Represent the trajectory using Bézier control points
-- Adjust the control points to minimize an objective function
-- <span style="color:red">Limited dynamics</span>
+- Trajectory using Bézier control points $(p_1,...,p_4)$
+- <span style="color:red">Kinodynamic feasibility</span> is not guaranteed
 
 
 ## Kinodynamic Motion Planning: Motion Primitives
@@ -342,7 +342,7 @@ LaCAM + db-Search = db-LaCAM (<span style="font-size:0.6em; color:gray;">Okumura
 
 <img src="media/image/phd-defense/additional-material/rollout-struggle-2.png" width="500" height="400">
 
-High-dimensional dynamics: <span style="color: red">Lipschitz continuity</span> breaks
+High-dimensional dynamics: <span style="color: red">Insufficient action resolution</span>
 
 ## db-Search: Rollout
 
@@ -410,10 +410,26 @@ Scalability up to $>1000$ double integrator dynamics
 
 . . . 
 
-- Classic planners struggle to handle corner cases
+- Motion primitives-based search
+  - stitch: expressive maneuvers, but computationally expensive
+  - rollout: restricted maneuver discovery
+
+. . . 
+
+- Hybrid planners (classic + ML-based) is a promising direction.
 
 
-# Thanks everyone! 
+## Thanks
+
+<div style="text-align: left;">
+
+Wolfgang Hönig (TU Berlin), Marc Toussaint (TU Berlin), Quim Ortiz-Haro (TU Berlin, IMPRS-IS), Keisuke Okumura (AIST, University of Cambridge), Amanda Prorok and Prorok Team (University of Cambridge).
+
+. . . 
+
+Thank you for your time!
+
+<div>
 
 
 ## References I
@@ -445,7 +461,9 @@ Jain, R., & Moldagalieva, A., Magnino, L., Amir, M., Okumura, K., Shankar, A., H
 Moldagalieva, A., Ortiz-Haro, JQ., Toussaint, M., & Hönig, W. (2024). db-CBS: Discontinuity-Bounded Conflict-Based Search for Multi-Robot Kinodynamic Motion Planning. (ICRA)<br>
 Moldagalieva, A., Ortiz-Haro, JQ., M., & Hönig, W. (2025). db-ECBS: db-ECBS: Interaction-Aware Multirobot Kinodynamic Motion Planning. (T-RO)<br>
 Moldagalieva, A., Okumura, K., Prorok, A., M., & Hönig, W. (2026). db-lacam: Fast and scalable multi-robot kinodynamic motion planning with discontinuity-bounded search and lightweight mapf. (ICAPS)<br>
-Phillips, J., Bedrossian, N., & Kavraki, L. (2004). Guided Expansive Spaces Trees: a search strategy for motion- and cost-constrained state spaces. (ICRA).
+Phillips, J., Bedrossian, N., & Kavraki, L. (2004). Guided Expansive Spaces Trees: a search strategy for motion- and cost-constrained state spaces. (ICRA).<br>
+Ortiz-Haro, JQ., Hönig, W., Toussaint, M. (2022). db-A$^\ast$: Discontinuity-bounded Search for Kinodynamic Mobile Robot Motion Planning. (ICRA)<br>
+Ortiz-Haro, JQ., Hönig, W., Toussaint, M. (2024). iDb-A$^\ast$: Iterative search and optimization for optimal kinodynamic motion planning. (T-RO)<br>
 <div>
 
 
